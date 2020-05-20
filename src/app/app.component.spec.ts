@@ -16,12 +16,6 @@ describe('AppComponent', () => {
 		expect(app).toBeTruthy();
 	});
 
-	it(`should have as title 'webwhatsapp'`, () => {
-		const fixture = TestBed.createComponent(AppComponent);
-		const app = fixture.componentInstance;
-		expect(app.title).toEqual('webwhatsapp');
-	});
-
 	it('should render title', () => {
 		const fixture = TestBed.createComponent(AppComponent);
 		fixture.detectChanges();
