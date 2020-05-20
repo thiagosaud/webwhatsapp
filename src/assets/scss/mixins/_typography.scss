@@ -1,0 +1,27 @@
+$path-relative: 'assets/fonts';
+$font-types: (
+	'Regular': normal,
+	'Bold': bold,
+);
+
+/* prettier-ignore */
+@mixin createFontface($font-name) {
+	@if $font-name == 'SegoeUI' {
+		@each $font-type, $font-weight in $font-types {
+			$full_name: '#{$font-name}-#{$font-type}';
+			$path: #{$path-relative}/#{to-lower-case($font-name)}/#{$full_name};
+
+			@font-face {
+				font-family: $font-name;
+				font-style:  normal;
+				font-weight: $font-weight;
+				src: url('#{$path}.eot');
+				src: url('#{$path}.eot?#iefix')  format('embedded-opentype'),
+						 url('#{$path}.woff')        format('woff'),
+						 url('#{$path}.ttf')         format('truetype');
+			}
+		}
+	} @else {
+		@error 'The font #{$font-name} does not exist in the project!';
+	}
+}

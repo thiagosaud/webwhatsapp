@@ -1,0 +1,16 @@
+@import 'placeholders/scrollbar';
+@import 'placeholders/utils';
+
+* {
+	@extend %scrollbar;
+	@extend %user-select;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'SegoeUI', 'Helvetica Neue', 'Helvetica', 'Lucida Grande', Arial, 'Ubuntu', 'Cantarell', 'Fira Sans', sans-serif !important;
+	font-size: 1rem;
+	outline: 0;
+	list-style: none;
+	text-decoration: none;
+	text-rendering: optimizeLegibility;
+}
