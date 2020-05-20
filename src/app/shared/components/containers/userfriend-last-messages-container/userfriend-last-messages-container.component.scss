@@ -1,0 +1,21 @@
+@import 'mixins/breakpoints';
+@import 'placeholders/flexbox';
+@import 'placeholders/utils';
+
+div {
+	@extend %flexbox-column;
+	padding: 0 0.8rem;
+
+	app-last-message {
+		@extend %text-ellipsis;
+		width: 200px;
+
+		@include breakpoint-smartphone-large {
+			width: 400px;
+		}
+
+		@include breakpoint-desktop {
+			width: 270px;
+		}
+	}
+}

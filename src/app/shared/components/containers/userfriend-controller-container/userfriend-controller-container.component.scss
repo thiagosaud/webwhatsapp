@@ -1,0 +1,25 @@
+@import 'mixins/breakpoints';
+
+app-global-container {
+	border-bottom: 1px solid #0000000d;
+
+	app-username {
+		flex: 1 1 auto;
+	}
+
+	app-icon[ng-reflect-name='arrown-back'] {
+		display: block !important;
+
+		@include breakpoint-desktop {
+			display: none !important;
+		}
+	}
+
+	app-icon-controller-container {
+		display: none !important;
+
+		@include breakpoint-desktop {
+			display: block !important;
+		}
+	}
+}

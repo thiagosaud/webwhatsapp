@@ -1,0 +1,13 @@
+@import 'mixins/breakpoints';
+
+app-global-container {
+	@include breakpoint-max-tablet {
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+	}
+
+	app-send-message-form {
+		flex: 1 1 auto;
+	}
+}

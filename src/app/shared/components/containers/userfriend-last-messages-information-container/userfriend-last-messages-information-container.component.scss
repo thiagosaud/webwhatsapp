@@ -1,0 +1,11 @@
+@import 'placeholders/flexbox';
+
+div {
+	&[isNewLastMessage='true'] {
+		@extend %flexbox-column-center;
+	}
+
+	&[isNewLastMessage='false'] {
+		@extend %flexbox-column;
+	}
+}

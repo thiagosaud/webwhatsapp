@@ -1,0 +1,13 @@
+@import 'placeholders/flexbox';
+
+span {
+	@extend %flexbox-align-center;
+	height: 22px;
+	width: 22px;
+	padding-bottom: 0.1rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	color: white;
+	border-radius: 100%;
+	background-color: #06d755;
+}

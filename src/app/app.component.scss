@@ -1,0 +1,11 @@
+@import 'mixins/breakpoints';
+@import 'placeholders/shadows';
+
+div {
+	@extend %shadow-main;
+	background-color: white;
+
+	@include breakpoint-desktop {
+		display: flex;
+	}
+}

@@ -1,0 +1,38 @@
+@import 'mixins/breakpoints';
+@import 'placeholders/scrollbar';
+@import 'placeholders/flexbox';
+
+ul {
+	@extend %scrollbar-y;
+	@extend %flexbox-column;
+	width: 100%;
+	background-color: white;
+
+	@include breakpoint-max-tablet {
+		height: 100vh;
+		padding: 6.8rem 0 0 0;
+	}
+
+	@include breakpoint-desktop {
+		height: 76.2vh;
+	}
+
+	@include breakpoint-4k {
+		height: 81.3vh;
+	}
+
+	li {
+		@extend %flexbox-between-stretch;
+		cursor: pointer;
+		padding: 0.5rem 0.8rem;
+		border-top: 1px solid #f2f2f2;
+
+		&:hover {
+			background-color: #ebebeb;
+		}
+
+		app-userfriend-last-messages-container {
+			flex: 1 1 auto;
+		}
+	}
+}

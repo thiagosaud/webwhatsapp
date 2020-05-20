@@ -1,0 +1,17 @@
+<div>
+	<svg
+		(click)="onclick.emit($event)"
+		[style.cursor]="cursor"
+		[style.position]="position"
+		[style.margin]="margin"
+		[ngStyle]="{
+			height: height ? height : '24px',
+			width: width ? width : '24px',
+			fill: fill ? fill : '#919191'
+		}"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 24 24"
+	>
+		<path [attr.d]="path"></path>
+	</svg>
+</div>

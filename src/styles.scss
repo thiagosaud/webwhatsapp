@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'base/colors';
+@import 'base/reset';
+@import 'mixins/typography';
+@import 'mixins/breakpoints';
+@import 'placeholders/scrollbar';
+
+@include createFontface('SegoeUI');
+
+body {
+	@extend %scrollbar-hidden;
+	height: 100vh;
+	background-color: red;
+
+	@include breakpoint-desktop {
+		margin-top: 0.1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: linear-gradient(to top, #dadbd5 78.7%, #009688 0%);
+	}
+}

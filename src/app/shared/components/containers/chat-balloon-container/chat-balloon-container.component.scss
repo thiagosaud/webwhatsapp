@@ -1,0 +1,19 @@
+@import 'placeholders/flexbox';
+@import 'placeholders/shadows';
+
+div {
+	@extend %flexbox-column-end;
+	@extend %shadow-balloon;
+	padding: 0.563rem 0.7rem;
+	border-radius: 0.469rem;
+
+	&[isUserFriendMessage='true'] {
+		float: right;
+		background-color: #dcf8c6;
+	}
+
+	&[isUserFriendMessage='false'] {
+		float: left;
+		background-color: white;
+	}
+}

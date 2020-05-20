@@ -1,0 +1,22 @@
+@import 'mixins/breakpoints';
+
+div {
+	padding: 0.4rem 0.5rem;
+	display: flex;
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #00000014;
+
+	&[isClicked='true'] {
+		background-color: white;
+	}
+
+	@include breakpoint-max-tablet {
+		width: 100%;
+		position: fixed;
+		margin-top: 3.7rem;
+	}
+
+	app-search-message-form {
+		flex: 1 1 auto;
+	}
+}

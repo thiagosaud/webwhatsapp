@@ -1,0 +1,16 @@
+@import 'mixins/breakpoints';
+
+div {
+	width: 250px;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+
+	@include breakpoint-smartphone-large {
+		width: 500px;
+	}
+
+	span {
+		font-size: 0.888rem;
+		color: #303030;
+	}
+}

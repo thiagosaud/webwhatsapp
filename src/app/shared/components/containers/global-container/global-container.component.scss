@@ -1,0 +1,8 @@
+@import 'placeholders/flexbox';
+
+div {
+	@extend %flexbox-between-center;
+	height: 60px;
+	padding: 0 1.5rem 0 1rem;
+	background-color: #ededed;
+}
