@@ -5,6 +5,7 @@
 	"private": true,
 	"scripts": {
 		"format_code": "pretty-quick --write \"{,!(node_modules)/**/}*.{ts, html, json, scss}\"",
+		"start_backend": "json-server --watch db.json",
 		"ng": "ng",
 		"start": "ng serve",
 		"build": "ng build",
