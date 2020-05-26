@@ -2,6 +2,10 @@
 
 main {
 	@include breakpoint-desktop {
+		width: 895px;
+	}
+
+	@include breakpoint-desktop-large {
 		width: 995px;
 	}
 }

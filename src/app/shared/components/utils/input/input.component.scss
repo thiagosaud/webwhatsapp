@@ -7,10 +7,10 @@ input {
 	font-size: 0.9375rem;
 	border: none;
 	background-color: white;
-	color: #4a4a4a;
+	color: var(--concrete-dark-1);
 
 	&::placeholder {
-		color: #999;
+		color: var(--concrete-light-2);
 	}
 
 	&[style='border-stack-big'],

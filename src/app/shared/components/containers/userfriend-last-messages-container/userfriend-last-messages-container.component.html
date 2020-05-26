@@ -1,4 +1,4 @@
 <div>
-	<app-username [text]="username"></app-username>
+	<app-username [fontWeight]="isNewLastMessage ? '500' : '400'" [fontColor]="'black'" [text]="username"></app-username>
 	<app-last-message [isNewLastMessage]="isNewLastMessage" [text]="lastmessage"></app-last-message>
 </div>

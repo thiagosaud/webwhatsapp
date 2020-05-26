@@ -1,25 +1,13 @@
-@import 'mixins/breakpoints';
+@import 'mixins/containers';
 @import 'placeholders/scrollbar';
 @import 'placeholders/flexbox';
 
 ul {
+	@include list-container(6.8rem 0 0 0, unset, 76.17vh, 83vh, 86vh, 89.8vh, 92.5vh, 94.2vh, 94.95vh);
 	@extend %scrollbar-y;
 	@extend %flexbox-column;
 	width: 100%;
 	background-color: white;
-
-	@include breakpoint-max-tablet {
-		height: 100vh;
-		padding: 6.8rem 0 0 0;
-	}
-
-	@include breakpoint-desktop {
-		height: 76.2vh;
-	}
-
-	@include breakpoint-4k {
-		height: 81.3vh;
-	}
 
 	li {
 		@extend %flexbox-between-stretch;
@@ -28,7 +16,7 @@ ul {
 		border-top: 1px solid #f2f2f2;
 
 		&:hover {
-			background-color: #ebebeb;
+			background-color: var(--beige-dark-2);
 		}
 
 		app-userfriend-last-messages-container {

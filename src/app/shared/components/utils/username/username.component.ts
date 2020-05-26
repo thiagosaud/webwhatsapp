@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class UsernameComponent implements OnInit {
 	@Input() text: string;
 	@Input() padding: string;
+	@Input() fontWeight: string;
+	@Input() fontColor: string;
 
 	constructor() {}
 

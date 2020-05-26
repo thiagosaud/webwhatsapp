@@ -36,6 +36,13 @@
 	align-items: center;
 }
 
+%flexbox-column-justify-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 %flexbox-column-end {
 	display: flex;
 	flex-direction: column;
