@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 
 // CONTAINERS COMPONENTS
@@ -33,6 +33,8 @@ import { MessageAmountComponent } from './components/utils/message-amount/messag
 import { MessageTimeComponent } from './components/utils/message-time/message-time.component';
 import { LastMessageComponent } from './components/utils/last-message/last-message.component';
 import { UsernameComponent } from './components/utils/username/username.component';
+import { SpinnerComponent } from './components/utils/spinner/spinner.component';
+import { ProgressBarComponent } from './components/utils/progress-bar/progress-bar.component';
 
 const components = [
 	AvatarComponent,
@@ -57,12 +59,14 @@ const components = [
 	LastMessageComponent,
 	MessageAmountComponent,
 	MessageTimeComponent,
+	ProgressBarComponent,
+	SpinnerComponent,
 	UsernameComponent,
 ];
 
 @NgModule({
 	declarations: [components],
-	imports: [CommonModule, ReactiveFormsModule],
+	imports: [CommonModule, BrowserAnimationsModule, ReactiveFormsModule],
 	exports: [components],
 })
 export class SharedModule {}

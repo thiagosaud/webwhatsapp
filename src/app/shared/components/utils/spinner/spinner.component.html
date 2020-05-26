@@ -1,0 +1,14 @@
+<div [style.margin]="margin">
+	<svg [@rotate] [style.height]="height" [style.width]="width" viewBox="0 0 44 44">
+		<circle
+			cx="22"
+			cy="22"
+			r="20"
+			[ngStyle]="{
+				fill: circleFill ? circleFill : 'none',
+				stroke: circleStroke ? circleStroke : 'none',
+				strokeWidth: circleStrokeWidth ? circleStrokeWidth : '4'
+			}"
+		></circle>
+	</svg>
+</div>

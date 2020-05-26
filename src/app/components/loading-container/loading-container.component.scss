@@ -1,0 +1,8 @@
+@import 'placeholders/flexbox';
+
+div {
+	@extend %flexbox-column-justify-center;
+	height: 100vh;
+	width: 100vw;
+	background-color: var(--beige-light);
+}
