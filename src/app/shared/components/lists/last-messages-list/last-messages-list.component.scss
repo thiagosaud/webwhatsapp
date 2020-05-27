@@ -13,9 +13,13 @@ ul {
 		@extend %flexbox-between-stretch;
 		cursor: pointer;
 		padding: 0.5rem 0.8rem;
-		border-top: 1px solid #f2f2f2;
+		border-top: 1px solid var(--beige-light-3);
 
 		&:hover {
+			background-color: var(--beige-light-2);
+		}
+
+		&[isClicked='true'] {
 			background-color: var(--beige-dark-2);
 		}
 

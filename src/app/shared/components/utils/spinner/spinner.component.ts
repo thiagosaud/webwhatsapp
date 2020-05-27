@@ -53,7 +53,7 @@ export class SpinnerComponent implements OnInit {
 	@Input() width = '65px';
 	@Input() margin: string;
 	@Input() circleFill = 'none';
-	@Input() circleStroke = '#acb9bf8f';
+	@Input() circleStroke = 'var(--concrete-light-3)';
 	@Input() circleStrokeWidth = '4';
 	@Input() circleStrokeLinecap = 'round';
 
