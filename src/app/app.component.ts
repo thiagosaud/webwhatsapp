@@ -1,8 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+// SERVICES
+import { StoreService } from '@services/store/store.service';
+import { UserStoreService } from '@services/store/user-store.service';
+import { ChatStoreService } from '@services/store/chat-store.service';
 
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {}
+export class AppComponent implements OnInit {
+	constructor(readonly store: StoreService, readonly userStore: UserStoreService, readonly chatStore: ChatStoreService) {}
+
+	ngOnInit(): void {
+		this.store.create();
+	}
+}
