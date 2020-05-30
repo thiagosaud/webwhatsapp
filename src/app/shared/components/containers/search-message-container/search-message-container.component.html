@@ -1,8 +1,16 @@
 <div [attr.isClicked]="isClicked$.getValue()">
-	<app-icon *ngIf="!isClicked$.getValue()" [name]="'search'" [fill]="'var(--grey-dark-4)'" [position]="'absolute'" [margin]="'0.4rem 0 0 0.9rem'"></app-icon>
+	<app-icon
+		*ngIf="!isClicked$.getValue()"
+		[rotateAnimation]="!isClicked$.getValue()"
+		[name]="'search'"
+		[fill]="'var(--grey-dark-4)'"
+		[position]="'absolute'"
+		[margin]="'0.4rem 0 0 0.9rem'"
+	></app-icon>
 	<app-icon
 		*ngIf="isClicked$.getValue()"
 		(onclick)="setBackStyleConfig()"
+		[rotateAnimation]="isClicked$.getValue()"
 		[name]="'arrown-back'"
 		[fill]="'var(--blue-dark)'"
 		[position]="'absolute'"

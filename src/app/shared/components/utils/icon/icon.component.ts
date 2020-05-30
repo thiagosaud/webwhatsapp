@@ -1,12 +1,18 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { trigger, transition, useAnimation } from '@angular/animations';
+
+// ANIMATIONS
+import { rotateCubic80Deg } from '@shared/animations/rotate.animations';
 
 @Component({
 	selector: 'app-icon',
 	templateUrl: './icon.component.html',
 	styleUrls: ['./icon.component.scss'],
+	animations: [trigger('rotateAnimation', [transition('* => true', [useAnimation(rotateCubic80Deg)])])],
 })
 export class IconComponent implements OnInit {
 	@Output() onclick = new EventEmitter<MouseEvent | TouchEvent>();
+	@Input() rotateAnimation = false;
 	@Input() name: string;
 	@Input() fill: string;
 	@Input() height: string;

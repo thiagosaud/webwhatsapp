@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { transition, style, animate, trigger, keyframes } from '@angular/animations';
+import { transition, trigger, useAnimation } from '@angular/animations';
+
+// ANIMATIONS
+import { rotateSpinner } from '@shared/animations/rotate.animations';
 
 @Component({
 	selector: 'app-spinner',
@@ -17,36 +20,7 @@ import { transition, style, animate, trigger, keyframes } from '@angular/animati
 			}
 		`,
 	],
-	animations: [
-		trigger('rotate', [
-			transition('* => *', [
-				animate(
-					'1500ms ease-in-out',
-					keyframes([
-						style({
-							offset: 0,
-							strokeDasharray: '1, 150',
-							strokeDashoffset: 0,
-						}),
-						style({
-							offset: 0.5,
-							strokeDasharray: '90, 150',
-							strokeDashoffset: -35,
-						}),
-						style({
-							offset: 1,
-							strokeDasharray: '90, 150',
-							strokeDashoffset: -124,
-						}),
-						style({
-							offset: 1,
-							transform: 'rotate(360deg)',
-						}),
-					])
-				),
-			]),
-		]),
-	],
+	animations: [trigger('rotateSpinner', [transition(':enter', [useAnimation(rotateSpinner)])])],
 })
 export class SpinnerComponent implements OnInit {
 	@Input() height = '65px';
