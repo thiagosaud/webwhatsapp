@@ -4,67 +4,98 @@
 			"id": "0f1f30df-aa71-4c49-bb5f-aa71c689a432",
 			"full_name": "THIAGO DE BONIS",
 			"avatar": "assets/images/users/thiago.jpg",
-			"isMain": true
+			"isMain": true,
+			"isClicked": false
 		},
 		{
 			"id": "cd7a7081-8d00-4156-98fb-ae0410532b37",
 			"full_name": "BILL GATES",
 			"avatar": "assets/images/users/bill.jpg",
-			"isMain": false
+			"isMain": false,
+			"isClicked": false
 		},
 		{
 			"id": "aba7beca-0ffa-4057-8e45-fb65ea11d4a0",
 			"full_name": "MARGARET HAMILTON",
 			"avatar": "assets/images/users/margaret.jpg",
-			"isMain": false
+			"isMain": false,
+			"isClicked": false
 		},
 		{
 			"id": "75d5a93f-25a3-44b8-a00c-9ec540e7269d",
 			"full_name": "STEVE JOBS",
 			"avatar": "assets/images/users/steve.jpg",
-			"isMain": false
+			"isMain": false,
+			"isClicked": false
 		},
 		{
 			"id": "d4918415-f2db-438a-9ecd-61cd504d626c",
 			"full_name": "NIKOLA TESLA",
 			"avatar": "assets/images/users/tesla.jpg",
-			"isMain": false
+			"isMain": false,
+			"isClicked": true
 		},
 		{
 			"id": "d564173f-bd44-41c5-95a9-4c0f3088271b",
 			"full_name": "LINUS TORVALDS",
 			"avatar": "assets/images/users/linus.jpg",
-			"isMain": false
+			"isMain": false,
+			"isClicked": false
 		},
 		{
 			"id": "85afbbab-d675-49b0-bbfe-c7903018c65b",
 			"full_name": "EDSGER DIJKSTRA",
 			"avatar": "assets/images/users/dijkstra.jpg",
-			"isMain": false
+			"isMain": false,
+			"isClicked": false
 		},
 		{
 			"id": "758474b4-0ac4-46be-81a4-bf7f14a6b740",
 			"full_name": "WARREN BUFFETT",
 			"avatar": "assets/images/users/warren.jpg",
-			"isMain": false
+			"isMain": false,
+			"isClicked": false
 		},
 		{
 			"id": "be1044ec-4e0b-4bab-86ac-87ca7dce7bc2",
 			"full_name": "JACK MA",
 			"avatar": "assets/images/users/jack.jpg",
-			"isMain": false
+			"isMain": false,
+			"isClicked": false
 		},
 		{
 			"id": "cbfe2ee3-6a4d-4c00-9206-f59694e31c30",
 			"full_name": "MARK ZUCKERBERG",
-			"avatar": "assets/images/mark.jpg",
-			"isMain": false
+			"avatar": "assets/images/users/mark.jpg",
+			"isMain": false,
+			"isClicked": false
 		}
 	],
 	"chat": [
 		{
-			"userId": "cd7a7081-8d00-4156-98fb-ae0410532b37",
+			"id": "cd7a7081-8d00-4156-98fb-ae0410532b37",
 			"messages": [
+				{
+					"id": "9f5da669-c6a4-4be2-8ad3-8f29058efbed",
+					"text": "2",
+					"time": "10:20",
+					"isMain": false,
+					"isRead": false
+				},
+				{
+					"id": "9f5da669-c6a4-4be2-8ad3-8f29058efbeg",
+					"text": "4",
+					"time": "10:20",
+					"isMain": false,
+					"isRead": false
+				},
+				{
+					"id": "9f5da669-c6a4-4be2-8ad3-8f29058efbed",
+					"text": "5",
+					"time": "10:20",
+					"isMain": false,
+					"isRead": false
+				},
 				{
 					"id": "9f5da669-c6a4-4be2-8ad3-8f29058efbea",
 					"text": "Try once, twice, three times and if possible try the fourth, fifth and as many times as necessary.Just don't give up in the first few attempts, persistence is a friend of conquest. If you want to get to where the majority doesn't, do what the majority don't.",
@@ -75,7 +106,7 @@
 			]
 		},
 		{
-			"userId": "aba7beca-0ffa-4057-8e45-fb65ea11d4a0",
+			"id": "aba7beca-0ffa-4057-8e45-fb65ea11d4a0",
 			"messages": [
 				{
 					"id": "8e19f8fe-d5b6-424a-a8bf-6b9538f5de49",
@@ -87,7 +118,7 @@
 			]
 		},
 		{
-			"userId": "75d5a93f-25a3-44b8-a00c-9ec540e7269d",
+			"id": "75d5a93f-25a3-44b8-a00c-9ec540e7269d",
 			"messages": [
 				{
 					"id": "de89e189-138f-4e3a-bb20-6124feceb576",
@@ -99,7 +130,7 @@
 			]
 		},
 		{
-			"userId": "d4918415-f2db-438a-9ecd-61cd504d626c",
+			"id": "d4918415-f2db-438a-9ecd-61cd504d626c",
 			"messages": [
 				{
 					"id": "0388a61b-d361-47b3-aaa5-59363f51785d",
@@ -111,7 +142,7 @@
 			]
 		},
 		{
-			"userId": "d564173f-bd44-41c5-95a9-4c0f3088271b",
+			"id": "d564173f-bd44-41c5-95a9-4c0f3088271b",
 			"messages": [
 				{
 					"id": "ce980f6e-5b9c-4edb-b8ea-cd3d45f83fb8",
@@ -123,7 +154,7 @@
 			]
 		},
 		{
-			"userId": "85afbbab-d675-49b0-bbfe-c7903018c65b",
+			"id": "85afbbab-d675-49b0-bbfe-c7903018c65b",
 			"messages": [
 				{
 					"id": "08377c54-4843-48c1-9b48-28ab8d586a8d",
@@ -135,7 +166,7 @@
 			]
 		},
 		{
-			"userId": "758474b4-0ac4-46be-81a4-bf7f14a6b740",
+			"id": "758474b4-0ac4-46be-81a4-bf7f14a6b740",
 			"messages": [
 				{
 					"id": "57bf6d07-7490-4c8f-bf30-57d954038e8d",
@@ -147,7 +178,7 @@
 			]
 		},
 		{
-			"userId": "be1044ec-4e0b-4bab-86ac-87ca7dce7bc2",
+			"id": "be1044ec-4e0b-4bab-86ac-87ca7dce7bc2",
 			"messages": [
 				{
 					"id": "a1c563c3-1965-463f-bce5-fc01baf16c5a",
@@ -159,7 +190,7 @@
 			]
 		},
 		{
-			"userId": "cbfe2ee3-6a4d-4c00-9206-f59694e31c30",
+			"id": "cbfe2ee3-6a4d-4c00-9206-f59694e31c30",
 			"messages": [
 				{
 					"id": "d9c2b42e-c6da-4de7-9aeb-0686b5685ed1",
