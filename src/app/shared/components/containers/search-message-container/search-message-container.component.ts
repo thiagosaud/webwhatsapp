@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { fromEvent } from 'rxjs';
+import { fromEvent, BehaviorSubject } from 'rxjs';
 
 @Component({
 	selector: 'app-search-message-container',
@@ -10,30 +10,31 @@ import { fromEvent } from 'rxjs';
 export class SearchMessageContainerComponent implements OnInit, AfterViewInit {
 	@ViewChild('searchMessageFormComponent', { read: ElementRef }) searchMessageFormComponent: ElementRef;
 	searchMessageForm: FormGroup;
-	isClicked = false;
+	isClicked$ = new BehaviorSubject<boolean>(false);
 
 	get isFormValid(): boolean {
 		return this.searchMessageForm.get('message').valid;
 	}
 
-	constructor(protected formBuilder: FormBuilder) {
+	constructor(protected readonly formBuilder: FormBuilder) {}
+
+	ngAfterViewInit(): void {
+		fromEvent(this.searchMessageFormComponent.nativeElement, 'click').subscribe(() => this.setIsClicked(true));
+	}
+
+	ngOnInit(): void {
 		this.searchMessageForm = this.formBuilder.group({
 			message: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(36)]],
 		});
 	}
 
-	ngAfterViewInit(): void {
-		fromEvent(this.searchMessageFormComponent.nativeElement, 'click').subscribe(() => this.setStyle(true));
+	protected setIsClicked(condition: boolean): void {
+		this.isClicked$.next(condition);
+		this.isClicked$.complete();
 	}
 
-	ngOnInit(): void {}
-
-	protected setStyle(condition: boolean): void {
-		this.isClicked = condition;
-	}
-
-	setBackConfig(): void {
-		this.setStyle(false);
+	setBackStyleConfig(): void {
+		this.setIsClicked(false);
 		this.clearInput();
 	}
 

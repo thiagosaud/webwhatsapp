@@ -13,11 +13,11 @@ export class SendMessageContainerComponent implements OnInit {
 		return this.sendMessageForm.get('message').valid;
 	}
 
-	constructor(protected formBuilder: FormBuilder) {
+	constructor(protected formBuilder: FormBuilder) {}
+
+	ngOnInit(): void {
 		this.sendMessageForm = this.formBuilder.group({
 			message: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(105)]],
 		});
 	}
-
-	ngOnInit(): void {}
 }

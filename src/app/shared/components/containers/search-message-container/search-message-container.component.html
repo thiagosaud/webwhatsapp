@@ -1,13 +1,13 @@
-<div [attr.isClicked]="isClicked">
-	<app-icon *ngIf="!isClicked" [name]="'search'" [fill]="'var(--grey-dark-4)'" [position]="'absolute'" [margin]="'0.4rem 0 0 0.9rem'"></app-icon>
+<div [attr.isClicked]="isClicked$.getValue()">
+	<app-icon *ngIf="!isClicked$.getValue()" [name]="'search'" [fill]="'var(--grey-dark-4)'" [position]="'absolute'" [margin]="'0.4rem 0 0 0.9rem'"></app-icon>
 	<app-icon
-		*ngIf="isClicked"
-		(onclick)="setBackConfig()"
+		*ngIf="isClicked$.getValue()"
+		(onclick)="setBackStyleConfig()"
 		[name]="'arrown-back'"
 		[fill]="'var(--blue-dark)'"
 		[position]="'absolute'"
 		[margin]="'0.4rem 0 0 0.9rem'"
 	></app-icon>
-	<app-search-message-form #searchMessageFormComponent [fmGroup]="searchMessageForm" [isClicked]="isClicked"></app-search-message-form>
+	<app-search-message-form #searchMessageFormComponent [fmGroup]="searchMessageForm" [isClicked]="isClicked$.getValue()"></app-search-message-form>
 	<app-icon *ngIf="isFormValid" (onclick)="clearInput()" [name]="'close'" [fill]="'var(--grey-dark-4)'" [margin]="'0.4rem .3rem 0 0'"></app-icon>
 </div>

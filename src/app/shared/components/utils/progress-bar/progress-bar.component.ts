@@ -9,8 +9,8 @@ import { switchMap, map, takeWhile } from 'rxjs/operators';
 })
 export class ProgressBarComponent implements OnInit {
 	@Input() loading$: Observable<boolean>;
-	protected interval = 1000; // 1ms
-	protected minutes = 0;
+	protected readonly interval = 1000; // 1ms
+	protected readonly minutes = 0;
 	timer$ = new Observable<number>();
 
 	protected get time(): number {
