@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { IChatMessage } from '@app/store/chat/chat.interface';
 
 @Component({
 	selector: 'app-chat-messages-list',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 	styleUrls: ['./chat-messages-list.component.scss'],
 })
 export class ChatMessagesListComponent implements OnInit {
-	@Input() isUserFriendMessage: boolean;
+	@Input() messages: IChatMessage[];
 
 	constructor() {}
 

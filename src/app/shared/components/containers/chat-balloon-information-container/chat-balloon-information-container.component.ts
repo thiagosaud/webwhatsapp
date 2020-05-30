@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
 	selector: 'app-chat-balloon-information-container',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./chat-balloon-information-container.component.scss'],
 })
 export class ChatBalloonInformationContainerComponent implements OnInit {
+	@Input() messageTime: Date;
+
 	constructor() {}
 
 	ngOnInit(): void {}
