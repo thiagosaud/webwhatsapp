@@ -1,0 +1,21 @@
+.user-select {
+	user-select: none;
+	-webkit-user-select: none !important;
+	-moz-user-select: none !important;
+	-ms-user-select: none !important;
+	-o-user-select: none !important;
+}
+
+.appearence-none {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+}
+
+.styles-none {
+	outline: 0;
+	list-style: none;
+	text-decoration: none;
+}

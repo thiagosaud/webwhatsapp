@@ -1,0 +1,48 @@
+@use "sass:map";
+
+$DIRECTION_LIST: 'top', 'right', 'bottom', 'left';
+
+//prettier-ignore
+@for $index from 0 through 100 {
+	@if $index == 0 {
+		// height and width
+		.h-auto { height: auto; }
+		.w-auto { width:  auto; }
+
+		.h-fill { height: -webkit-fill-available; }
+		.w-fill { width:  -webkit-fill-available; }
+
+		// margin and padding
+		.margin-none  { margin:  0; }
+		.padding-none { padding: 0; }
+
+	} @else {
+		// height and width
+		.h-#{$index}  { height: #{$index}rem; }
+		.hv-#{$index} { height: #{$index}vh;  }
+		.hvw-#{$index} { height: #{$index}vw;  }
+
+		.w-#{$index}  { width: #{$index}rem; }
+		.wv-#{$index} { width: #{$index}vh;  }
+		.wvw-#{$index} { width: #{$index}vw;  }
+
+		// margin and padding
+		.margin-#{$index}     { margin:  #{$index}rem;   }
+		.margin-tb-#{$index}  { margin:  #{$index}rem 0; }
+		.margin-rl-#{$index}  { margin:  0 #{$index}rem; }
+
+
+		.padding-#{$index}    { padding: #{$index}rem;   }
+		.padding-tb-#{$index} { padding: #{$index}rem 0; }
+		.padding-rl-#{$index} { padding: 0 #{$index}rem; }
+
+		// generate for direction
+		@each $name in $DIRECTION_LIST {
+			.margin-#{$name}-#{$index}  { margin-#{$name}:  #{$index}rem; }
+			.padding-#{$name}-#{$index} { padding-#{$name}: #{$index}rem; }
+		}
+
+		// font-size
+		.font-size-#{$index} { font-size: #{$index}rem; }
+	}
+}

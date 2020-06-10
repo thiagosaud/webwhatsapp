@@ -1,0 +1,18 @@
+@import 'themes/flexbox';
+@import 'themes/typography';
+@import 'themes/colors';
+@import 'themes/borders';
+
+span {
+	@extend .d-flex-justify-align-center;
+	@extend .border-radius-rounded;
+	@extend .font-weight-600;
+	@extend .bg-green-light-2;
+	@extend .color-white;
+	font-size: 0.75rem;
+
+	&[sizeTheme='DEFAULT'] {
+		height: 1.375rem;
+		width: 1.375rem;
+	}
+}

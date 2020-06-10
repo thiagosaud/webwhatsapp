@@ -1,36 +1,17 @@
-@import 'placeholders/utils';
-@import 'placeholders/borders';
+@import 'themes/sizes';
+@import 'themes/colors';
+@import 'themes/borders';
 
 input {
-	@extend %text-ellipsis;
-	width: 100%;
-	font-size: 0.9375rem;
-	border: none;
-	background-color: white;
-	color: var(--concrete-dark-1);
+	@extend .w-fill;
+	@extend .border-style-none;
+	font-size: 0.9rem;
 
-	&::placeholder {
-		color: var(--concrete-light-2);
-	}
-
-	&[style='border-stack-big'],
-	&[style='border-stack-small'] {
-		@extend %border-radius-stack;
-	}
-
-	&[style='border-stack-big'] {
-		padding: 0.7rem 1rem;
-
-		&::placeholder {
-			font-size: 1rem;
-		}
-	}
-
-	&[style='border-stack-small'] {
-		padding: 0.5rem 2rem 0.5rem 4rem;
-
-		&::placeholder {
-			font-size: 0.875rem;
-		}
+	&[theme='ROUNDED_DEFAULT'] {
+		@extend .margin-rl-1;
+		@extend .border-radius-stack;
+		@extend .bg-white;
+		@extend .color-black;
+		@extend .color-placeholder-grey-dark-1;
 	}
 }

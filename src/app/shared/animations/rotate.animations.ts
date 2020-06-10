@@ -2,7 +2,7 @@ import { animation, animate, keyframes, style } from '@angular/animations';
 
 export const rotateCubic80Deg = animation([
 	animate(
-		'0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+		'0.1s cubic-bezier(0.4, 0, 0.2, 1)',
 		keyframes([
 			style({
 				offset: 0,

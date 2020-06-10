@@ -7,11 +7,10 @@ import { IChatMessage } from '@store/chat/chat.interface';
 @Component({
 	selector: 'app-chat-main-container',
 	templateUrl: './chat-main-container.component.html',
-	styleUrls: ['./chat-main-container.component.scss'],
 })
 export class ChatMainContainerComponent implements OnInit {
 	@Input() userFriendSelected: IUser;
-	@Input() chatMessageList: IChatMessage[];
+	@Input() chatMessagesList: IChatMessage[];
 
 	constructor() {}
 

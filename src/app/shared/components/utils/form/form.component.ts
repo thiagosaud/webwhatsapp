@@ -3,13 +3,15 @@ import { FormGroup } from '@angular/forms';
 
 @Component({
 	selector: 'app-form',
-	templateUrl: './form.component.html',
-	styleUrls: ['./form.component.scss'],
+	template: `
+		<form [formGroup]="fmGroup" [attr.autocomplete]="autocomplete" novalidate>
+			<ng-content></ng-content>
+		</form>
+	`,
 })
 export class FormComponent implements OnInit {
 	@Input() fmGroup: FormGroup;
-	@Input() autocomplete: boolean;
-	@Input() padding: string;
+	@Input() autocomplete?: boolean;
 
 	constructor() {}
 

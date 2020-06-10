@@ -1,9 +1,12 @@
-<main>
-	<app-userfriend-controller-container
-		[avatar]="userFriendSelected.avatar"
-		[avatarAlt]="userFriendSelected.full_name"
-		[username]="userFriendSelected.full_name"
-	></app-userfriend-controller-container>
-	<app-chat-messages-list [messages]="chatMessageList"></app-chat-messages-list>
-	<app-send-message-container></app-send-message-container>
-</main>
+<app-core-container [sizeTheme]="'LARGE'" [class]="'shadow-right-small'">
+	<app-user-panel-container
+		[isUserMainPanel]="false"
+		[username]="userFriendSelected?.full_name"
+		[userAvatar]="userFriendSelected?.avatar"
+		[userAvatarAlt]="userFriendSelected?.full_name"
+	></app-user-panel-container>
+
+	<app-chat-message-list [list]="chatMessagesList"></app-chat-message-list>
+
+	<app-send-message-panel-container></app-send-message-panel-container>
+</app-core-container>

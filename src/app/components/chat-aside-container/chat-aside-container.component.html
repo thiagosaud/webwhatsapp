@@ -1,5 +1,5 @@
-<aside>
-	<app-user-controller-container [userAvatar]="userMain.avatar" [userAvatarAlt]="userMain.full_name"></app-user-controller-container>
-	<app-search-message-container></app-search-message-container>
-	<app-last-messages-list (onclick)="updateStore($event)" [latestMessageList]="latestMessageList"></app-last-messages-list>
-</aside>
+<app-core-container [class]="'shadow-left-small'">
+	<app-user-panel-container [isUserMainPanel]="true" [userAvatar]="userMain?.avatar" [userAvatarAlt]="userMain?.full_name"></app-user-panel-container>
+	<app-search-message-panel-container></app-search-message-panel-container>
+	<app-chat-last-message-list (onclick)="updateStore($event)" [list]="lastMessagesList" [friendsList]="usersFriends"></app-chat-last-message-list>
+</app-core-container>

@@ -1,10 +1,10 @@
 @import 'mixins/breakpoints';
+@import 'themes/utils';
 
 progress {
 	&[value] {
+		@extend .appearence-none;
 		height: 5px;
-		-webkit-appearance: none;
-		appearance: none;
 
 		@include breakpoint-smartphone {
 			width: 200px;
@@ -15,12 +15,12 @@ progress {
 		}
 
 		&::-webkit-progress-bar {
-			background-color: var(--beige-dark-4);
+			background-color: var(--brown-light-7);
 			border-radius: 0;
 		}
 
 		&::-webkit-progress-value {
-			background-color: var(--green-light);
+			background-color: var(--green-light-3);
 		}
 	}
 }

@@ -1,0 +1,15 @@
+@import 'themes/typography';
+@import 'themes/colors';
+
+span {
+	@extend .color-black-dark-4;
+	font-size: 0.75rem;
+
+	&[theme='DEFAULT'] {
+		@extend .font-weight-400;
+	}
+
+	&[theme='BOLD'] {
+		@extend .font-weight-600;
+	}
+}

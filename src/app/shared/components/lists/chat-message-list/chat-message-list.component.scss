@@ -1,0 +1,57 @@
+@import 'themes/flexbox';
+@import 'themes/positions';
+@import 'themes/colors';
+@import 'themes/shadows';
+@import 'themes/borders';
+
+:host {
+	@extend .position-relative;
+	@extend .d-flex-grow;
+	@extend .bg-image-blend;
+	padding: 0 8%;
+
+	ul {
+		@extend .d-flex-column-align-center;
+		margin: 0.75rem 0;
+
+		li {
+			@extend .shadow-bottom-light;
+			padding: 0.375rem 0.438rem 0 0.563rem;
+			margin-bottom: 0.4rem;
+			min-width: 15%;
+			max-width: 66%;
+			word-break: break-all;
+
+			&:before {
+				@extend .position-absolute;
+				content: '';
+			}
+
+			&[theme='USER_MAIN'] {
+				@extend .border-radius-balloon-left;
+				@extend .bg-green-light-1;
+				margin: 0 0 0.5rem auto;
+
+				&:before {
+					right: 2.7rem;
+					transform: translate(-1.7rem, -0.37rem);
+					border-top: 0.9375rem solid #dcf8c6;
+					border-right: 0.9375rem solid transparent;
+				}
+			}
+
+			&[theme='USER_FRIEND'] {
+				@extend .border-radius-balloon-right;
+				@extend .bg-white;
+				margin: 0 auto 0.5rem 0;
+
+				&:before {
+					@extend .border-radius-triangle-right;
+					transform: translate(-1rem, -0.38rem);
+					border-top: 0.9375rem solid white;
+					border-left: 0.9375rem solid transparent;
+				}
+			}
+		}
+	}
+}

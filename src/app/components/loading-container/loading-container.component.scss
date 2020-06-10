@@ -1,8 +1,10 @@
-@import 'placeholders/flexbox';
+@import 'themes/flexbox';
+@import 'themes/sizes';
+@import 'themes/colors';
 
 div {
-	@extend %flexbox-column-justify-center;
-	height: 100vh;
-	width: 100vw;
-	background-color: var(--beige-light-1);
+	@extend .wvw-100;
+	@extend .hv-100;
+	@extend .d-flex-column-justify-align-center;
+	@extend .bg-brown-light-1;
 }

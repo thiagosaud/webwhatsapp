@@ -1,0 +1,21 @@
+@import 'themes/flexbox';
+@import 'themes/colors';
+@import 'themes/sizes';
+
+div {
+	@extend .d-flex-justify-align-between-center;
+	@extend .bg-brown-light-4;
+	@extend .padding-rl-1;
+
+	&[sizeTheme='DEFAULT'] {
+		height: 3.6875rem;
+	}
+
+	&[sizeTheme='SMALL'] {
+		height: 3.0625rem;
+	}
+
+	&[sizeTheme='LARGE'] {
+		height: 3.875rem;
+	}
+}

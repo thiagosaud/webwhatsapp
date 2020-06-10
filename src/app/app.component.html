@@ -5,10 +5,11 @@
 		[userMain]="userStore.main$ | async"
 		[usersFriends]="userStore.friends$ | async"
 		[userFriendSelected]="userStore.friendSelected$ | async"
-		[latestMessageList]="chatStore.getFriendLatestMessageList$(userStore.friends$ | async) | async"
+		[lastMessagesList]="chatStore.friendLastMessagesList$ | async"
 	></app-chat-aside-container>
+
 	<app-chat-main-container
 		[userFriendSelected]="userStore.friendSelected$ | async"
-		[chatMessageList]="chatStore.getMessagesById$((userStore.friendSelected$ | async).id) | async"
+		[chatMessagesList]="chatStore.getChatMessagesById$((userStore.friendSelected$ | async)?.id) | async"
 	></app-chat-main-container>
 </ng-template>

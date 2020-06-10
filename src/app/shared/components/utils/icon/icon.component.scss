@@ -1,3 +1,23 @@
-svg {
-	display: flex;
+@import 'themes/positions';
+@import 'themes/cursors';
+@import 'themes/colors';
+
+div {
+	@extend .position-relative;
+	@extend .cursor-pointer;
+	@extend .fill-grey-dark-2;
+
+	svg {
+		&[sizeTheme='DEFAULT'] {
+			width: 1.5rem;
+		}
+
+		&[sizeTheme='SMALL'] {
+			width: 1.125rem;
+		}
+
+		&[sizeTheme='LARGE'] {
+			width: 1.625rem;
+		}
+	}
 }

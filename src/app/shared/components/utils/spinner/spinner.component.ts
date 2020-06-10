@@ -1,33 +1,33 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { transition, trigger, useAnimation } from '@angular/animations';
-
-// ANIMATIONS
+import { trigger, transition, useAnimation } from '@angular/animations';
 import { rotateSpinner } from '@shared/animations/rotate.animations';
 
 @Component({
 	selector: 'app-spinner',
-	templateUrl: './spinner.component.html',
-	styles: [
-		`
-			div {
-				display: flex;
-
-				svg {
-					circle {
-						stroke-linecap: round;
-					}
-				}
-			}
-		`,
-	],
-	animations: [trigger('rotateSpinner', [transition(':enter', [useAnimation(rotateSpinner)])])],
+	template: `
+		<div [style.margin]="margin">
+			<svg viewBox="0 0 44 44" [@rotate]="activeRotateAnimation" [class]="class">
+				<circle
+					cx="22"
+					cy="22"
+					r="20"
+					[ngStyle]="{
+						fill: circleFill ? circleFill : 'none',
+						stroke: circleStroke ? circleStroke : 'none',
+						strokeWidth: circleStrokeWidth ? circleStrokeWidth : '4'
+					}"
+				></circle>
+			</svg>
+		</div>
+	`,
+	animations: [trigger('rotate', [transition('void => true', [useAnimation(rotateSpinner)])])],
 })
 export class SpinnerComponent implements OnInit {
-	@Input() height = '65px';
-	@Input() width = '65px';
+	@Input() activeRotateAnimation: boolean;
+	@Input() class = 'h-4 w-4';
 	@Input() margin: string;
 	@Input() circleFill = 'none';
-	@Input() circleStroke = 'var(--concrete-light-3)';
+	@Input() circleStroke = 'var(--grey-light-3)';
 	@Input() circleStrokeWidth = '4';
 	@Input() circleStrokeLinecap = 'round';
 

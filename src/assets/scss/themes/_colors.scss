@@ -1,0 +1,91 @@
+@use "sass:map";
+
+//prettier-ignore
+$COLORS_MAP: (
+	(
+		'WHITE':         #ffffff,
+		'BROWN-LIGHT-1': #f7f7f7,
+		'BROWN-LIGHT-2': #f0f0f0,
+		'BROWN-LIGHT-3': #f2f2f2,
+		'BROWN-LIGHT-4': #ededed,
+		'BROWN-LIGHT-5': #f5f5f5,
+		'BROWN-LIGHT-6': #dddbd1,
+		'BROWN-LIGHT-7': #e0e4e5,
+		'BROWN-DARK-1':  #ebebeb,
+		'BROWN-DARK-2':  #dadbd5,
+		'BROWN-DARK-3':  #e5ddd5,
+		'BROWN-DARK-4':  #e5ddd5,
+		'GREEN-LIGHT-1': #dcf8c6,
+		'GREEN-LIGHT-2': #06d755,
+		'GREEN-LIGHT-3': #02d1a4,
+		'GREEN-DARK-1':  #009688,
+		'BLUE-LIGHT-1':  #4fc3f7,
+		'GREY-LIGHT-1':  #b1afa7,
+		'GREY-LIGHT-2':  #00000029,
+		'GREY-LIGHT-3':  #acb9bf8f,
+		'GREY-DARK-1': 	 #999999,
+		'GREY-DARK-2':   #919191,
+		'GREY-DARK-4':   #303030,
+		'GREY-DARK-5':   #4a4a4a,
+		'GREY-DARK-6':   #ffffff1a,
+		'GREY-DARK-7':   #00000033,
+		'GREY-DARK-8':   #00000014,
+		'GREY-DARK-9':   #00000052,
+		'BLACK':         #000000,
+		'BLACK-DARK-1':  #00000021,
+		'BLACK-DARK-2':  #00000023,
+		'BLACK-DARK-3':  #0000004d,
+		'BLACK-DARK-4':  #00000073,
+		'BLACK-DARK-5':  #000000cc
+	)
+);
+
+// Root
+:root {
+	@each $name, $hexadecimal in $COLORS_MAP {
+		$new_name: to-lower-case($name);
+
+		--#{$new_name}: #{$hexadecimal};
+	}
+}
+
+// Generics
+@each $name, $hexadecimal in $COLORS_MAP {
+	$new_name: to-lower-case($name);
+
+	// background
+	.bg-#{$new_name} {
+		background-color: $hexadecimal;
+	}
+
+	// text-color
+	.color-#{$new_name} {
+		color: $hexadecimal;
+	}
+
+	// text-color in placeholder
+	.color-placeholder-#{$new_name} {
+		&::placeholder,
+		&::-webkit-input-placeholder,
+		&::-moz-placeholder,
+		&::-ms-input-placeholder,
+		&::-o-placeholder {
+			color: $hexadecimal;
+		}
+	}
+
+	// fill-color
+	.fill-#{$new_name} {
+		fill: $hexadecimal;
+	}
+}
+
+// BACKGROUND-LINEAR
+.bg-linear-gradient {
+	background: linear-gradient(to top, map.get($COLORS_MAP, 'BROWN-DARK-2') 86.3%, map.get($COLORS_MAP, 'GREEN-DARK-1') 0%);
+}
+
+.bg-image-blend {
+	background: var(--brown-dark-3) url('assets/images/bg.png') repeat scroll;
+	background-blend-mode: soft-light;
+}

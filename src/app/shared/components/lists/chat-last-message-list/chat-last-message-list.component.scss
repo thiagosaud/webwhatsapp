@@ -1,0 +1,27 @@
+@import 'themes/cursors';
+@import 'themes/flexbox';
+@import 'themes/colors';
+@import 'themes/scrollbars';
+@import 'themes/borders';
+
+:host {
+	@extend .scrollbar-y-auto;
+	@extend .d-flex-grow;
+
+	ul {
+		li {
+			@extend .cursor-pointer;
+			@extend .d-flex-justify-align-between-center;
+			@extend .border-solid-bottom-brown-light;
+			padding: 0.5rem 0.8rem;
+
+			&:hover {
+				@extend .bg-brown-light-5;
+			}
+
+			&[isActived='true'] {
+				@extend .bg-brown-dark-1;
+			}
+		}
+	}
+}

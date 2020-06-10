@@ -22,11 +22,6 @@ export interface IChatMessage {
 	isRead: boolean;
 }
 
-export interface IChatFriendLatestMessage {
-	user: IUser;
-	informations: {
-		latestMessage: IChatMessage;
-		isNewLastMessage: boolean;
-		total: number;
-	};
+export interface IChatFriendLastMessagesList extends IChatMessage {
+	total: number;
 }

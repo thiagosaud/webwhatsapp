@@ -1,29 +1,15 @@
-@import 'base/colors';
+// THEMES
+@import 'themes/borders';
+@import 'themes/colors';
+@import 'themes/cursors';
+@import 'themes/flexbox';
+@import 'themes/positions';
+@import 'themes/scrollbars';
+@import 'themes/shadows';
+@import 'themes/sizes';
+@import 'themes/typography';
+@import 'themes/utils';
+
+// BASES
 @import 'base/reset';
-@import 'mixins/typography';
-@import 'mixins/breakpoints';
-@import 'placeholders/scrollbar';
-@import 'placeholders/shadows';
-
-@include createFontface('SegoeUI');
-
-body {
-	@extend %scrollbar-hidden;
-
-	@include breakpoint-desktop {
-		height: 100vh;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background: linear-gradient(to top, var(--beige-dark-3) 78.7%, var(--green-dark-2) 0%);
-	}
-
-	app-root {
-		@extend %shadow-main;
-		background-color: white;
-
-		@include breakpoint-desktop {
-			display: flex;
-		}
-	}
-}
+@import 'base/body';

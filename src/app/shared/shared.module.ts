@@ -3,65 +3,66 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 
-// CONTAINERS COMPONENTS
-import { ChatBalloonContainerComponent } from './components/containers/chat-balloon-container/chat-balloon-container.component';
-import { ChatBalloonInformationContainerComponent } from './components/containers/chat-balloon-information-container/chat-balloon-information-container.component';
-import { GlobalContainerComponent } from './components/containers/global-container/global-container.component';
-import { IconControllerContainerComponent } from './components/containers/icon-controller-container/icon-controller-container.component';
-import { SearchMessageContainerComponent } from './components/containers/search-message-container/search-message-container.component';
-import { SendMessageContainerComponent } from './components/containers/send-message-container/send-message-container.component';
-import { UserControllerContainerComponent } from './components/containers/user-controller-container/user-controller-container.component';
-import { UserfriendControllerContainerComponent } from './components/containers/userfriend-controller-container/userfriend-controller-container.component';
-import { UserfriendLastMessagesContainerComponent } from './components/containers/userfriend-last-messages-container/userfriend-last-messages-container.component';
-import { UserfriendLastMessagesInformationContainerComponent } from './components/containers/userfriend-last-messages-information-container/userfriend-last-messages-information-container.component';
+// CONTAINERS COMPONENT'S
+import { CoreContainerComponent } from './components/containers/core-container/core-container.component';
+import { PanelContainerComponent } from './components/containers/panel-container/panel-container.component';
+import { SearchMessagePanelContainerComponent } from './components/containers/search-message-panel-container/search-message-panel-container.component';
+import { SendMessagePanelContainerComponent } from './components/containers/send-message-panel-container/send-message-panel-container.component';
+import { UserPanelContainerComponent } from './components/containers/user-panel-container/user-panel-container.component';
+import { UserIconPanelContainerComponent } from './components/containers/user-panel-container/user-icon-panel-container/user-icon-panel-container.component';
 
-// FORMS COMPONENTS
-import { SendMessageFormComponent } from './components/forms/send-message-form/send-message-form.component';
+// FORMS COMPONENT'S
 import { SearchMessageFormComponent } from './components/forms/search-message-form/search-message-form.component';
+import { SendMessageFormComponent } from './components/forms/send-message-form/send-message-form.component';
 
-// LISTS COMPONENTS
-import { ChatMessagesListComponent } from './components/lists/chat-messages-list/chat-messages-list.component';
-import { LastMessagesListComponent } from './components/lists/last-messages-list/last-messages-list.component';
+// LISTS COMPONENT'S
+import { ChatMessageListComponent } from './components/lists/chat-message-list/chat-message-list.component';
+import { ChatMessageControllerComponent } from './components/lists/chat-message-list/chat-message-controller/chat-message-controller.component';
+import { ChatMessageTextComponent } from './components/lists/chat-message-list/chat-message-text/chat-message-text.component';
 
-// UTILS COMPONENTS
+import { ChatLastMessageListComponent } from './components/lists/chat-last-message-list/chat-last-message-list.component';
+import { ChatLastMessagePrimaryControllerComponent } from './components/lists/chat-last-message-list/chat-last-message-primary-controller/chat-last-message-primary-controller.component';
+import { ChatLastMessageSecondaryControllerComponent } from './components/lists/chat-last-message-list/chat-last-message-secondary-controller/chat-last-message-secondary-controller.component';
+import { ChatLastMessageTextComponent } from './components/lists/chat-last-message-list/chat-last-message-primary-controller/chat-last-message-text/chat-last-message-text.component';
+
+// TEXTS COMPONENT'S
+import { UsernameComponent } from './components/texts/username/username.component';
+import { TimeComponent } from './components/texts/time/time.component';
+
+// UTILS COMPONENT'S
 import { AvatarComponent } from './components/utils/avatar/avatar.component';
-import { ChatMessageComponent } from './components/utils/chat-message/chat-message.component';
-import { FormComponent } from './components/utils/form/form.component';
+import { EllipseComponent } from './components/utils/ellipse/ellipse.component';
 import { IconComponent } from './components/utils/icon/icon.component';
+import { FormComponent } from './components/utils/form/form.component';
 import { InputComponent } from './components/utils/input/input.component';
-import { MessageAmountComponent } from './components/utils/message-amount/message-amount.component';
-import { MessageTimeComponent } from './components/utils/message-time/message-time.component';
-import { LastMessageComponent } from './components/utils/last-message/last-message.component';
-import { UsernameComponent } from './components/utils/username/username.component';
 import { SpinnerComponent } from './components/utils/spinner/spinner.component';
 import { ProgressBarComponent } from './components/utils/progress-bar/progress-bar.component';
 
 const components = [
-	AvatarComponent,
-	ChatMessageComponent,
-	FormComponent,
-	IconComponent,
-	ChatBalloonContainerComponent,
-	ChatBalloonInformationContainerComponent,
-	GlobalContainerComponent,
-	IconControllerContainerComponent,
-	SearchMessageContainerComponent,
-	SendMessageContainerComponent,
-	UserControllerContainerComponent,
-	UserfriendControllerContainerComponent,
-	UserfriendLastMessagesContainerComponent,
-	UserfriendLastMessagesInformationContainerComponent,
-	SendMessageFormComponent,
+	CoreContainerComponent,
+	ChatMessageListComponent,
+	ChatMessageControllerComponent,
+	ChatMessageTextComponent,
+	ChatLastMessageListComponent,
+	ChatLastMessagePrimaryControllerComponent,
+	ChatLastMessageSecondaryControllerComponent,
+	ChatLastMessageTextComponent,
+	PanelContainerComponent,
+	SearchMessagePanelContainerComponent,
+	SendMessagePanelContainerComponent,
+	UserPanelContainerComponent,
+	UserIconPanelContainerComponent,
 	SearchMessageFormComponent,
-	ChatMessagesListComponent,
-	LastMessagesListComponent,
-	InputComponent,
-	LastMessageComponent,
-	MessageAmountComponent,
-	MessageTimeComponent,
-	ProgressBarComponent,
-	SpinnerComponent,
+	SendMessageFormComponent,
+	TimeComponent,
 	UsernameComponent,
+	AvatarComponent,
+	EllipseComponent,
+	IconComponent,
+	FormComponent,
+	InputComponent,
+	SpinnerComponent,
+	ProgressBarComponent,
 ];
 
 @NgModule({

@@ -4,7 +4,7 @@ import { BehaviorSubject, combineLatest } from 'rxjs';
 
 // INTERFACES
 import { IUser } from '@store/user/user.interface';
-import { IChatFriendLatestMessage, IChat } from '@store/chat/chat.interface';
+import { IChatFriendLastMessagesList, IChat } from '@store/chat/chat.interface';
 
 // SERVICES
 import { UserStoreService } from '@services/store/user-store.service';
@@ -13,22 +13,21 @@ import { ChatStoreService } from '@services/store/chat-store.service';
 @Component({
 	selector: 'app-chat-aside-container',
 	templateUrl: './chat-aside-container.component.html',
-	styleUrls: ['./chat-aside-container.component.scss'],
 })
 export class ChatAsideContainerComponent implements OnInit {
 	@Input() userMain: IUser;
 	@Input() usersFriends: IUser[];
 	@Input() userFriendSelected: IUser;
-	@Input() latestMessageList: IChatFriendLatestMessage[];
+	@Input() lastMessagesList: IChatFriendLastMessagesList[];
 
 	constructor(protected readonly userStore: UserStoreService, protected readonly chatStore: ChatStoreService) {}
 
 	ngOnInit(): void {}
 
-	updateStore(latestMessageList: IChatFriendLatestMessage): void {
-		if (!latestMessageList.user.isClicked) {
-			this.updateChatUserFriend(latestMessageList.user, this.userFriendSelected);
-			this.updateUserFriend(latestMessageList.user, this.userFriendSelected);
+	updateStore({ userFriend }: { userFriend: IUser }): void {
+		if (!userFriend.isClicked) {
+			this.updateChatUserFriend(userFriend, this.userFriendSelected);
+			this.updateUserFriend(userFriend, this.userFriendSelected);
 		}
 	}
 
@@ -43,12 +42,10 @@ export class ChatAsideContainerComponent implements OnInit {
 		const updates$ = new BehaviorSubject<Update<IChat>[]>(null);
 
 		combineLatest([
-			this.chatStore.getUpdateFriendLatestMessages$(userClicked.id),
-			this.chatStore.getUpdateFriendLatestMessages$(oldUserClicked.id),
-		]).subscribe(data => updates$.next(data));
+			this.chatStore.getUpdateFriendLastMessagesListById$(userClicked.id),
+			this.chatStore.getUpdateFriendLastMessagesListById$(oldUserClicked.id),
+		]).subscribe(updates => updates$.next(updates));
 
 		this.chatStore.setUpdateMany(updates$.getValue());
-
-		updates$.complete();
 	}
 }

@@ -1,8 +1,0 @@
-<app-global-container [borderLeft]="'1px solid var(--grey-dark-2)'">
-	<app-icon [name]="'emoticon'" [height]="'27px'" [width]="'27px'"></app-icon>
-	<app-send-message-form [fmGroup]="sendMessageForm"></app-send-message-form>
-	<app-icon *ngIf="isFormValid; else sendVoice" [name]="'arrown-send'"></app-icon>
-	<ng-template #sendVoice>
-		<app-icon [name]="'microphone'"></app-icon>
-	</ng-template>
-</app-global-container>

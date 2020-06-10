@@ -4,13 +4,17 @@ import { switchMap, map, takeWhile } from 'rxjs/operators';
 
 @Component({
 	selector: 'app-progress-bar',
-	templateUrl: './progress-bar.component.html',
+	template: `
+		<div>
+			<progress dir="ltr" max="100" [value]="timer$ | async"></progress>
+		</div>
+	`,
 	styleUrls: ['./progress-bar.component.scss'],
 })
 export class ProgressBarComponent implements OnInit {
 	@Input() loading$: Observable<boolean>;
-	protected readonly interval = 1000; // 1ms
-	protected readonly minutes = 0;
+	protected interval = 1000; // 1ms
+	protected minutes = 0;
 	timer$ = new Observable<number>();
 
 	protected get time(): number {

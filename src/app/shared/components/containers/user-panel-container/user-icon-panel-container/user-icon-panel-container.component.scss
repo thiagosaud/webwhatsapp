@@ -1,0 +1,5 @@
+@import 'themes/flexbox';
+
+div {
+	@extend .d-flex-align-center;
+}

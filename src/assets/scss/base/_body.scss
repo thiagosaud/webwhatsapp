@@ -1,0 +1,17 @@
+@import 'mixins/breakpoints';
+
+body {
+	app-root {
+		@extend .scrollbar-grey-large;
+		@extend .scrollbar-auto;
+		@extend .hv-100;
+		@extend .d-flex;
+		@extend .bg-linear-gradient;
+
+		@include breakpoint-desktop {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}

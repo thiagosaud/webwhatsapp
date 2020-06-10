@@ -1,0 +1,16 @@
+$SHADOW_MAP: (
+	'right-small': 5px 4px 10px -4px var(--grey-dark-9),
+	'left-small': 0px 5px 10px -4px var(--grey-dark-9),
+	'bottom-small': 0px 1px 2px 0px var(--grey-light-2),
+	'bottom-light': 0 0.063rem 0.031rem var(--black-dark-1),
+);
+
+@each $name, $value in $SHADOW_MAP {
+	.shadow-#{$name} {
+		-webkit-box-shadow: $value;
+		-moz-box-shadow: $value;
+		-ms-box-shadow: $value;
+		-o-box-shadow: $value;
+		box-shadow: $value;
+	}
+}

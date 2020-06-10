@@ -1,27 +1,27 @@
-$path-relative: 'assets/fonts';
-$font-types: (
+$FULL_PATH_RELATIVE_RELATIVE: 'assets/fonts';
+$FONT_TYPE_MAP: (
 	'Regular': normal,
 	'Bold': bold,
 );
 
 /* prettier-ignore */
-@mixin createFontface($font-name) {
-	@if $font-name == 'SegoeUI' {
-		@each $font-type, $font-weight in $font-types {
-			$full_name: '#{$font-name}-#{$font-type}';
-			$path: #{$path-relative}/#{to-lower-case($font-name)}/#{$full_name};
+@mixin createFontface($FONT_NAME) {
+	@if $FONT_NAME == 'SegoeUI' {
+		@each $FONT_TYPE, $FONT_WEIGHT in $FONT_TYPE_MAP {
+			$FONT_FULL_NAME: '#{$FONT_NAME}-#{$FONT_TYPE}';
+			$FULL_PATH_RELATIVE: #{$FULL_PATH_RELATIVE_RELATIVE}/#{to-lower-case($FONT_NAME)}/#{$FONT_FULL_NAME};
 
 			@font-face {
-				font-family: $font-name;
+				font-family: $FONT_NAME;
 				font-style:  normal;
-				font-weight: $font-weight;
-				src: url('#{$path}.eot');
-				src: url('#{$path}.eot?#iefix')  format('embedded-opentype'),
-						 url('#{$path}.woff')        format('woff'),
-						 url('#{$path}.ttf')         format('truetype');
+				font-weight: $FONT_WEIGHT;
+				src: url('#{$FULL_PATH_RELATIVE}.eot');
+				src: url('#{$FULL_PATH_RELATIVE}.eot?#iefix')  format('embedded-opentype'),
+						 url('#{$FULL_PATH_RELATIVE}.woff')        format('woff'),
+						 url('#{$FULL_PATH_RELATIVE}.ttf')         format('truetype');
 			}
 		}
 	} @else {
-		@error 'The font #{$font-name} does not exist in the project!';
+		@error 'The font #{$FONT_NAME} does not exist in the project!';
 	}
 }

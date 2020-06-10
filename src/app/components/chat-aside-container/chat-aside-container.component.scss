@@ -1,7 +1,0 @@
-@import 'mixins/breakpoints';
-
-aside {
-	@include breakpoint-desktop {
-		width: 410px;
-	}
-}

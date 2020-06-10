@@ -1,0 +1,9 @@
+@import 'themes/flexbox';
+@import 'themes/typography';
+@import 'themes/sizes';
+
+:host {
+	@extend .d-flex-grow;
+	@extend .margin-rl-1;
+	@extend .text-ellipse;
+}

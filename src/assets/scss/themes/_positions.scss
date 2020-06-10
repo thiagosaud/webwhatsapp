@@ -1,0 +1,29 @@
+$POSITION_MAP: (
+	'static': static,
+	'absolute': absolute,
+	'fixed': fixed,
+	'relative': relative,
+	'sticky': sticky,
+);
+
+$FLOAT_MAP: (
+	'none': none,
+	'left': left,
+	'right': right,
+	'initial': initial,
+	'inherit': inherit,
+);
+
+// GENERATE POSITIONS
+@each $name, $value in $POSITION_MAP {
+	.position-#{$name} {
+		position: $value;
+	}
+}
+
+// GENERATE FLOATS
+@each $name, $value in $FLOAT_MAP {
+	.float-#{$name} {
+		float: $value;
+	}
+}

@@ -5,8 +5,7 @@ import { Observable } from 'rxjs';
 
 // INTERFACES
 import IStoreState from '@store/store.interface';
-import { IChat, IChatMessage, IChatFriendLatestMessage } from '@store/chat/chat.interface';
-import { IUser } from '@store/user/user.interface';
+import { IChat, IChatMessage, IChatFriendLastMessagesList } from '@store/chat/chat.interface';
 
 // STORE CONFIG'S
 import * as action from '@store/chat/chat.actions';
@@ -36,15 +35,31 @@ export class ChatStoreService {
 		return this.store.pipe(select(selector.error));
 	}
 
-	getMessagesById$(userId: string): Observable<IChatMessage[]> {
-		return this.store.pipe(select(selector.messagesById, { userId }));
+	get friendLastMessagesList$(): Observable<IChatFriendLastMessagesList[]> {
+		return this.store.pipe(select(selector.chatFriendLastMessagesList));
 	}
 
-	getFriendLatestMessageList$(usersFriends: IUser[]): Observable<IChatFriendLatestMessage[]> {
-		return this.store.pipe(select(selector.friendLatestMessageList, { users: usersFriends }));
+	getChatMessagesById$(userId: string): Observable<IChatMessage[]> {
+		return this.store.pipe(select(selector.chatMessagesById, { userId }));
 	}
 
-	getUpdateFriendLatestMessages$(userId: string): Observable<Update<IChat>> {
-		return this.store.pipe(select(selector.updateFriendLatestMessages, { userId }));
+	getChatFriendMessagesById$(userId: string): Observable<IChatMessage[]> {
+		return this.store.pipe(select(selector.chatFriendMessages, { userId }));
+	}
+
+	getChatFriendMessagesUnreadById$(userId: string): Observable<IChatMessage[]> {
+		return this.store.pipe(select(selector.chatFriendMessagesUnread, { userId }));
+	}
+
+	getChatFriendLastMessageUnreadById$(userId: string): Observable<IChatMessage> {
+		return this.store.pipe(select(selector.chatFriendLastMessage, { userId }));
+	}
+
+	getChatTotalFriendLastMessagesUnreadById$(userId: string): Observable<number> {
+		return this.store.pipe(select(selector.chatTotalFriendLastMessagesUnread, { userId }));
+	}
+
+	getUpdateFriendLastMessagesListById$(userId: string): Observable<Update<IChat>> {
+		return this.store.pipe(select(selector.updateFriendLastMessagesList, { userId }));
 	}
 }

@@ -1,0 +1,38 @@
+$BORDER_STYLE_MAP: (
+	'none': none,
+);
+
+$BORDER_RADIUS_MAP: (
+	'triangle-right': 0.25rem 0 0 0,
+	'balloon-right': 0 0.469rem 0.469rem 0.469rem,
+	'balloon-left': 0.469rem 0 0.469rem 0.469rem,
+	'rounded': 100%,
+	'stack': 2.5rem,
+);
+
+// GENERATE BORDER-STYLE
+@each $name, $value in $BORDER_STYLE_MAP {
+	.border-style-#{$name} {
+		border: $value;
+	}
+}
+
+// GENERATE BORDER-RADIUS
+@each $name, $value in $BORDER_RADIUS_MAP {
+	.border-radius-#{$name} {
+		border-radius: $value;
+		-moz-border-radius: $value;
+		-webkit-border-radius: $value;
+		-ms-border-radius: $value;
+		-o-border-radius: $value;
+	}
+}
+
+// CUSTOMS
+.border-solid-left-light {
+	border-left: 1px solid var(--grey-dark-8);
+}
+
+.border-solid-bottom-brown-light {
+	border-bottom: 1px solid var(--brown-light-3);
+}

@@ -1,0 +1,23 @@
+@import 'themes/flexbox';
+@import 'themes/typography';
+@import 'themes/sizes';
+@import 'themes/colors';
+
+:host {
+	&[hostActiveFlex='true'] {
+		@extend .d-flex-grow;
+	}
+
+	span {
+		@extend .font-size-1;
+		@extend .color-black;
+
+		&[theme='DEFAULT'] {
+			@extend .font-weight-400;
+		}
+
+		&[theme='BOLD'] {
+			@extend .font-weight-500;
+		}
+	}
+}

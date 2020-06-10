@@ -1,0 +1,20 @@
+@import 'themes/typography';
+@import 'themes/colors';
+
+div {
+	@extend .text-ellipse;
+	margin-top: 0.2rem;
+
+	span {
+		@extend .color-black;
+		font-size: 0.875rem;
+
+		&[theme='DEFAULT'] {
+			@extend .font-weight-400;
+		}
+
+		&[theme='BOLD'] {
+			@extend .font-weight-500;
+		}
+	}
+}

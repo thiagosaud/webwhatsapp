@@ -1,0 +1,33 @@
+<app-panel-container [sizeTheme]="'SMALL'" [class]="!isClicked ? 'padding-none bg-brown-light-1' : 'bg-white shadow-bottom-small'">
+	<app-icon
+		*ngIf="!isClicked; else clicked"
+		[name]="'MAGNIFYING_GLASS'"
+		[sizeTheme]="'SMALL'"
+		[activeRotateAnimation]="true"
+		[containerClass]="'position-absolute'"
+		[containerTransform]="'translate(21px, -20px)'"
+		[iconClass]="'cursor-pointer fill-black-dark-3'"
+	></app-icon>
+
+	<ng-template #clicked>
+		<app-icon
+			(onclick)="setIsClicked(false)"
+			[name]="'ARROW_BACK'"
+			[activeRotateAnimation]="true"
+			[containerClass]="'position-absolute'"
+			[containerTransform]="'translate(2px, -23px)'"
+			[iconClass]="'cursor-pointer fill-blue-light-1'"
+		></app-icon>
+
+		<app-icon
+			*ngIf="searchMessageForm.valid"
+			(onclick)="removeValue()"
+			[name]="'CLOSE'"
+			[containerClass]="'position-absolute'"
+			[containerTransform]="'translate(370px, -23px)'"
+			[iconClass]="'cursor-pointer fill-black-dark-3'"
+		></app-icon>
+	</ng-template>
+
+	<app-search-message-form (inputEvent)="setIsClicked($event)" [fmGroup]="searchMessageForm" [activePlaceholder]="isClicked"></app-search-message-form>
+</app-panel-container>

@@ -1,5 +1,19 @@
+@import 'themes/borders';
+
 img {
-	cursor: pointer;
-	border-radius: 100%;
 	object-fit: cover;
+
+	&[sizeTheme='DEFAULT'] {
+		height: 2.5rem;
+		width: 2.5rem;
+	}
+
+	&[sizeTheme='LARGE'] {
+		height: 3.0625rem;
+		width: 3.0625rem;
+	}
+
+	&[borderTheme='ROUNDED'] {
+		@extend .border-radius-rounded;
+	}
 }
