@@ -17,7 +17,7 @@ export interface IChat {
 export interface IChatMessage {
 	id: string;
 	text: string;
-	time: Date;
+	time: string;
 	isMain: boolean;
 	isRead: boolean;
 }

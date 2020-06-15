@@ -62,4 +62,8 @@ export class ChatStoreService {
 	getUpdateFriendLastMessagesListById$(userId: string): Observable<Update<IChat>> {
 		return this.store.pipe(select(selector.updateFriendLastMessagesList, { userId }));
 	}
+
+	getUpdateSendMessageById$(userId: string, message: string): Observable<Update<IChat>> {
+		return this.store.pipe(select(selector.updateSendMessage, { userId, message }));
+	}
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, HostBinding, Input, Output, EventEmitter, ElementRef } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
@@ -6,8 +6,8 @@ import { FormGroup } from '@angular/forms';
 	template: `
 		<app-form [fmGroup]="fmGroup" [autocomplete]="'off'">
 			<app-input
-				(onclick)="this.inputEvent.emit(true)"
-				(onblur)="this.inputEvent.emit(fmGroup.valid)"
+				(onclick)="this.onclick.emit($event)"
+				(onblur)="this.onblur.emit($event)"
 				[padding]="'0.6rem 4rem 0.6rem 4rem'"
 				[fontSize]="'.9rem'"
 				[fmGroup]="fmGroup"
@@ -22,7 +22,8 @@ import { FormGroup } from '@angular/forms';
 })
 export class SearchMessageFormComponent implements OnInit {
 	@HostBinding('class') hostClass = 'd-flex-grow';
-	@Output() inputEvent = new EventEmitter<boolean>();
+	@Output() onclick = new EventEmitter<ElementRef | boolean>();
+	@Output() onblur = new EventEmitter<ElementRef | boolean>();
 	@Input() fmGroup: FormGroup;
 	@Input() activePlaceholder: boolean;
 

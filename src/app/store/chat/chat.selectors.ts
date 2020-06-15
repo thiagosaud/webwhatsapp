@@ -1,10 +1,9 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { Update } from '@ngrx/entity';
+import { v4 as uuidv4 } from 'uuid';
 
-// INTERFACES
+// INTERFACES AND CONFIG'S
 import IStoreState from '@store/store.interface';
-
-// CONFIG'S
 import { adapter } from './chat.reducer';
 import { IEntityState, IChat, IChatFriendLastMessagesList } from './chat.interface';
 
@@ -53,6 +52,32 @@ export const updateFriendLastMessagesList = createSelector(chatMessagesById, (ch
 
 	return update;
 });
+
+export const updateSendMessage = createSelector(
+	store => store,
+	(store: IStoreState, { userId, message }: { userId: string; message: string }) => {
+		const chatMessages = chatMessagesById(store, { userId });
+
+		const date = new Date();
+		const update: Update<IChat> = {
+			id: userId,
+			changes: {
+				messages: [
+					...chatMessages,
+					{
+						id: uuidv4(),
+						text: message,
+						time: `${date.getHours()}:${date.getMinutes()}`,
+						isMain: true,
+						isRead: false,
+					},
+				],
+			},
+		};
+
+		return update;
+	}
+);
 
 export const isLoading = createSelector(FEATURE_SELECTOR, ({ loading }) => loading);
 export const error = createSelector(FEATURE_SELECTOR, ({ dataError }) => dataError);

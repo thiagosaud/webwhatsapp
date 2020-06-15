@@ -8,5 +8,5 @@
 
 	<app-chat-message-list [list]="chatMessagesList"></app-chat-message-list>
 
-	<app-send-message-panel-container></app-send-message-panel-container>
+	<app-send-message-panel-container (send)="sendMessage($event)"></app-send-message-panel-container>
 </app-core-container>

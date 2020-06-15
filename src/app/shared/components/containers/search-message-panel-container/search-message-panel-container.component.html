@@ -29,5 +29,10 @@
 		></app-icon>
 	</ng-template>
 
-	<app-search-message-form (inputEvent)="setIsClicked($event)" [fmGroup]="searchMessageForm" [activePlaceholder]="isClicked"></app-search-message-form>
+	<app-search-message-form
+		(onclick)="setIsClicked(true)"
+		(onblur)="setIsClicked(searchMessageForm.valid)"
+		[fmGroup]="searchMessageForm"
+		[activePlaceholder]="isClicked"
+	></app-search-message-form>
 </app-panel-container>
