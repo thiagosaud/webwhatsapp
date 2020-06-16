@@ -17,11 +17,12 @@ export interface IChat {
 export interface IChatMessage {
 	id: string;
 	text: string;
-	time: string;
+	time: Date;
 	isMain: boolean;
 	isRead: boolean;
 }
 
 export interface IChatFriendLastMessagesList extends IChatMessage {
+	user: IUser;
 	total: number;
 }

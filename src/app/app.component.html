@@ -3,7 +3,6 @@
 <ng-template #loadingComplete>
 	<app-chat-aside-container
 		[userMain]="userStore.main$ | async"
-		[usersFriends]="userStore.friends$ | async"
 		[userFriendSelected]="userStore.friendSelected$ | async"
 		[lastMessagesList]="chatStore.friendLastMessagesList$ | async"
 	></app-chat-aside-container>

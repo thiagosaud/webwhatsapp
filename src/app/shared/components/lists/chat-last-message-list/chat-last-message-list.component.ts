@@ -7,19 +7,19 @@ import { IUser } from '@store/user/user.interface';
 @Component({
 	selector: 'app-chat-last-message-list',
 	template: ` <ul>
-		<li *ngFor="let message of list; let i = index" (click)="onclick.emit({ userFriend: friendsList[i] })" [attr.isActived]="friendsList[i]?.isClicked">
-			<app-avatar [sizeTheme]="'LARGE'" [src]="friendsList[i]?.avatar" [alt]="friendsList[i]?.full_name"></app-avatar>
+		<li *ngFor="let message of list; let i = index" (click)="onclick.emit({ userFriend: message.user })" [attr.isActived]="message.user?.isClicked">
+			<app-avatar [sizeTheme]="'LARGE'" [src]="message.user?.avatar" [alt]="message.user?.full_name"></app-avatar>
 
 			<app-chat-last-message-primary-controller
-				[username]="friendsList[i]?.full_name"
+				[username]="message.user?.full_name"
 				[lastMessage]="message?.text"
-				[isNewLastMessage]="!!message?.total && !friendsList[i]?.isClicked"
+				[isNewLastMessage]="!!message?.total && !message.user?.isClicked"
 			></app-chat-last-message-primary-controller>
 
 			<app-chat-last-message-secondary-controller
 				[messageTime]="message?.time"
 				[lastMessageAmount]="message?.total"
-				[isNewLastMessage]="!!message?.total && !friendsList[i]?.isClicked"
+				[isNewLastMessage]="!!message?.total && !message.user?.isClicked"
 			></app-chat-last-message-secondary-controller>
 		</li>
 	</ul>`,
@@ -28,9 +28,27 @@ import { IUser } from '@store/user/user.interface';
 export class ChatLastMessageListComponent implements OnInit {
 	@Output() onclick = new EventEmitter<{ userFriend: IUser }>();
 	@Input() list: IChatFriendLastMessagesList[];
-	@Input() friendsList: IUser[];
 
 	constructor() {}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		console.log(this.list);
+	}
 }
+
+// <li *ngFor="let message of list; let i = index" (click)="onclick.emit({ userFriend: friendsList[i] })" [attr.isActived]="friendsList[i]?.isClicked">
+// <app-avatar [sizeTheme]="'LARGE'" [src]="friendsList[i]?.avatar" [alt]="friendsList[i]?.full_name"></app-avatar>
+
+// <app-chat-last-message-primary-controller
+// 	[username]="friendsList[i]?.full_name"
+// 	[lastMessage]="message?.text"
+// 	[isNewLastMessage]="!!message?.total && !friendsList[i]?.isClicked"
+// ></app-chat-last-message-primary-controller>
+
+// <app-chat-last-message-secondary-controller
+// 	[messageTime]="message?.time"
+// 	[lastMessageAmount]="message?.total"
+// 	[isNewLastMessage]="!!message?.total && !friendsList[i]?.isClicked"
+// ></app-chat-last-message-secondary-controller>
+// </li>
+// </ul>`,

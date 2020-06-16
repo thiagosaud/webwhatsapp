@@ -16,6 +16,7 @@ export const chatMessagesById = createSelector(selectAll, (chatMessages: IChat[]
 	return chatMessages.map((chat, i) => {
 		if (chat.id === userId) {
 			index = i;
+
 			return chat.messages;
 		}
 	})[index];
@@ -32,11 +33,12 @@ export const chatFriendLastMessagesList = createSelector(
 
 			list.push({
 				...lastMessageUnread,
+				user: store.user.data.filter(user => chat.id === user.id)[0],
 				total: totalMessagesUnread,
 			});
 		});
 
-		return list;
+		return list.sort((a, b) => new Date(b.time).getTime() - new Date(a.time).getTime());
 	}
 );
 
@@ -57,8 +59,6 @@ export const updateSendMessage = createSelector(
 	store => store,
 	(store: IStoreState, { userId, message }: { userId: string; message: string }) => {
 		const chatMessages = chatMessagesById(store, { userId });
-
-		const date = new Date();
 		const update: Update<IChat> = {
 			id: userId,
 			changes: {
@@ -67,7 +67,7 @@ export const updateSendMessage = createSelector(
 					{
 						id: uuidv4(),
 						text: message,
-						time: `${date.getHours()}:${date.getMinutes()}`,
+						time: new Date(),
 						isMain: true,
 						isRead: false,
 					},

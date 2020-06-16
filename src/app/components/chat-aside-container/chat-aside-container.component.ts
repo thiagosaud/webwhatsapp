@@ -16,7 +16,6 @@ import { ChatStoreService } from '@services/store/chat-store.service';
 })
 export class ChatAsideContainerComponent implements OnInit {
 	@Input() userMain: IUser;
-	@Input() usersFriends: IUser[];
 	@Input() userFriendSelected: IUser;
 	@Input() lastMessagesList: IChatFriendLastMessagesList[];
 

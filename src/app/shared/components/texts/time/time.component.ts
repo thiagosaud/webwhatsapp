@@ -5,7 +5,7 @@ import { ITimeTheme } from './time.component.interface';
 	selector: 'app-time',
 	template: `
 		<div [style.transform]="transform">
-			<span [attr.theme]="theme">{{ value }}</span>
+			<span [attr.theme]="theme">{{ value | date: 'hh:mm' }}</span>
 		</div>
 	`,
 	styleUrls: ['./time.component.scss'],
