@@ -112,5 +112,8 @@
 			}
 		}
 	},
-	"defaultProject": "webwhatsapp"
+	"defaultProject": "webwhatsapp",
+	"cli": {
+		"analytics": "9ef0ff34-b968-464f-9a05-563e2aa638e4"
+	}
 }
