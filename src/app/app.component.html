@@ -4,7 +4,7 @@
 	<app-chat-aside-container
 		[userMain]="userStore.main$ | async"
 		[userFriendSelected]="userStore.friendSelected$ | async"
-		[lastMessagesList]="chatStore.friendLastMessagesList$ | async"
+		[lastMessagesList]="chatStore.getFriendLastMessagesList$(userStore.friends$ | async) | async"
 	></app-chat-aside-container>
 
 	<app-chat-main-container

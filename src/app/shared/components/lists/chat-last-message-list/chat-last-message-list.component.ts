@@ -6,23 +6,25 @@ import { IUser } from '@store/user/user.interface';
 
 @Component({
 	selector: 'app-chat-last-message-list',
-	template: ` <ul>
-		<li *ngFor="let message of list; let i = index" (click)="onclick.emit({ userFriend: message.user })" [attr.isActived]="message.user?.isClicked">
-			<app-avatar [sizeTheme]="'LARGE'" [src]="message.user?.avatar" [alt]="message.user?.full_name"></app-avatar>
+	template: `
+		<ul>
+			<li *ngFor="let message of list" (click)="onclick.emit({ userFriend: message?.user })" [attr.isActived]="message?.user?.isClicked">
+				<app-avatar [sizeTheme]="'LARGE'" [src]="message?.user?.avatar" [alt]="message?.user?.full_name"></app-avatar>
 
-			<app-chat-last-message-primary-controller
-				[username]="message.user?.full_name"
-				[lastMessage]="message?.text"
-				[isNewLastMessage]="!!message?.total && !message.user?.isClicked"
-			></app-chat-last-message-primary-controller>
+				<app-chat-last-message-primary-controller
+					[username]="message?.user?.full_name"
+					[lastMessage]="message?.text"
+					[isNewLastMessage]="!!message?.total && !message?.user?.isClicked"
+				></app-chat-last-message-primary-controller>
 
-			<app-chat-last-message-secondary-controller
-				[messageTime]="message?.time"
-				[lastMessageAmount]="message?.total"
-				[isNewLastMessage]="!!message?.total && !message.user?.isClicked"
-			></app-chat-last-message-secondary-controller>
-		</li>
-	</ul>`,
+				<app-chat-last-message-secondary-controller
+					[messageTime]="message?.time"
+					[lastMessageAmount]="message?.total"
+					[isNewLastMessage]="!!message?.total && !message.user?.isClicked"
+				></app-chat-last-message-secondary-controller>
+			</li>
+		</ul>
+	`,
 	styleUrls: ['./chat-last-message-list.component.scss'],
 })
 export class ChatLastMessageListComponent implements OnInit {
@@ -31,9 +33,7 @@ export class ChatLastMessageListComponent implements OnInit {
 
 	constructor() {}
 
-	ngOnInit(): void {
-		console.log(this.list);
-	}
+	ngOnInit(): void {}
 }
 
 // <li *ngFor="let message of list; let i = index" (click)="onclick.emit({ userFriend: friendsList[i] })" [attr.isActived]="friendsList[i]?.isClicked">

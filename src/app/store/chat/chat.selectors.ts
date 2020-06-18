@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 // INTERFACES AND CONFIG'S
 import IStoreState from '@store/store.interface';
+import { IUser } from '@store/user/user.interface';
 import { adapter } from './chat.reducer';
 import { IEntityState, IChat, IChatFriendLastMessagesList } from './chat.interface';
 
@@ -24,7 +25,7 @@ export const chatMessagesById = createSelector(selectAll, (chatMessages: IChat[]
 
 export const chatFriendLastMessagesList = createSelector(
 	store => store,
-	(store: IStoreState) => {
+	(store: IStoreState, { users }: { users: IUser[] }) => {
 		const list: IChatFriendLastMessagesList[] = [];
 
 		store.chat.data.forEach(chat => {
@@ -33,7 +34,7 @@ export const chatFriendLastMessagesList = createSelector(
 
 			list.push({
 				...lastMessageUnread,
-				user: store.user.data.filter(user => chat.id === user.id)[0],
+				user: users.filter(user => chat.id === user.id)[0],
 				total: totalMessagesUnread,
 			});
 		});
