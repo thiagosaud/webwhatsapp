@@ -1,5 +1,5 @@
 <h1 align="center">
-	<img alt="GoStack" src="temp/images/webwhatsapp.jpg" width="500px" />
+	<img alt="GoStack" src="temp/images/webwhatsapp.jpg" width="1000px" />
 </h1>
 
 <h3 align="center">Webwhatsapp: Simple Copy</h3>
