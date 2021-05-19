@@ -83,10 +83,6 @@ export class UserBackendService {
 
 	constructor(protected readonly http: HttpClient) {}
 
-	restoreAll(): Observable<Update<IUser>> {
-		return this.http.put<Update<IUser>>(this.url, this.databaseOriginal);
-	}
-
 	getAll(): Observable<IUser[]> {
 		return this.http.get<IUser[]>(this.url);
 	}

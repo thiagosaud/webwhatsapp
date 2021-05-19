@@ -121,10 +121,6 @@ export class ChatBackendService {
 
 	constructor(protected readonly http: HttpClient) {}
 
-	restoreAll(): Observable<Update<IChat>> {
-		return this.http.put<Update<IChat>>(this.url, this.databaseOriginal);
-	}
-
 	get(): Observable<IChat[]> {
 		return this.http.get<IChat[]>(this.url);
 	}

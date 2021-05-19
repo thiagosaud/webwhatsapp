@@ -13,11 +13,6 @@ export class StoreService {
 
 	constructor(protected readonly userStore: UserStoreService, protected readonly chatStore: ChatStoreService, protected readonly router: Router) {}
 
-	restore(): void {
-		this.userStore.restoreAll();
-		this.chatStore.restoreAll();
-	}
-
 	create(): void {
 		this.userStore.setAll();
 		this.chatStore.setAll();

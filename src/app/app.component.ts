@@ -10,9 +10,7 @@ import { ChatStoreService } from '@services/store/chat-store.service';
 	templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
-	constructor(readonly store: StoreService, readonly userStore: UserStoreService, readonly chatStore: ChatStoreService) {
-		this.store.restore();
-	}
+	constructor(readonly store: StoreService, readonly userStore: UserStoreService, readonly chatStore: ChatStoreService) {}
 
 	ngOnInit(): void {
 		this.store.create();
