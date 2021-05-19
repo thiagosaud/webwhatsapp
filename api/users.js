@@ -87,12 +87,13 @@ module.exports = (req, res) => {
 			res.status(400).json({ error: 'The user id does not exist in the params!' });
 		}
 
+		const databaseDraft = database;
 		const userIndex = database.findIndex(prop => prop.id === id);
 		if (userIndex === -1) {
 			res.status(400).json({ error: `'The user with the id: "${id}" does not exist!` });
 		}
 
-		database[userIndex] = { ...database[userIndex], ...req.body };
-		res.status(200).json(database[userIndex]);
+		databaseDraft[userIndex] = { ...databaseDraft[userIndex], ...req.body };
+		res.status(200).json(databaseDraft[userIndex]);
 	}
 };

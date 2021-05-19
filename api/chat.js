@@ -125,12 +125,13 @@ module.exports = (req, res) => {
 			res.status(400).json({ error: 'The chat user id does not exist in the params!' });
 		}
 
-		const chatIndex = database.findIndex(prop => prop.id === id);
+		const databaseDraft = database;
+		const chatIndex = databaseDraft.findIndex(prop => prop.id === id);
 		if (chatIndex === -1) {
 			res.status(400).json({ error: `'The chat user with the id: "${id}" does not exist!` });
 		}
 
-		database[chatIndex].messages = [...req.body.messages];
-		res.status(200).json(database[chatIndex]);
+		databaseDraft[chatIndex].messages = [...req.body.messages];
+		res.status(200).json(databaseDraft[chatIndex]);
 	}
 };
