@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, timer, combineLatest } from 'rxjs';
+import { Router, NavigationEnd } from '@angular/router';
+import { BehaviorSubject, combineLatest, timer } from 'rxjs';
 import { filter, takeWhile } from 'rxjs/operators';
 
 // SERVICES
@@ -10,7 +11,12 @@ import { ChatStoreService } from '@services/store/chat-store.service';
 export class StoreService {
 	isLoading$ = new BehaviorSubject<boolean>(true);
 
-	constructor(protected readonly userStore: UserStoreService, protected readonly chatStore: ChatStoreService) {}
+	constructor(protected readonly userStore: UserStoreService, protected readonly chatStore: ChatStoreService, protected readonly router: Router) {}
+
+	restore(): void {
+		this.userStore.restoreAll();
+		this.chatStore.restoreAll();
+	}
 
 	create(): void {
 		this.userStore.setAll();

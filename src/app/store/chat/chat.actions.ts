@@ -2,6 +2,10 @@ import { createAction, props } from '@ngrx/store';
 import { Update } from '@ngrx/entity';
 import { IChat } from './chat.interface';
 
+export const RESTORE_ALL = createAction('[RESTORE] Persist Chat in the database');
+export const RESTORE_ALL_SUCCESS = createAction('[RESTORE] The Chat has been successfully persisted in the database!', props<{ updates: Update<IChat>[] }>());
+export const RESTORE_ALL_FAIL = createAction('[RESTORE] Error in Chat persistence in the database', props<{ error: any }>());
+
 export const GET = createAction('[GET/CHAT] Chat');
 export const GET_SUCCESS = createAction('[GET/CHAT] The Chat have been successfully obtained', props<{ chat: IChat[] }>());
 export const GET_FAIL = createAction('[GET/CHAT] Error getting Chat', props<{ error: any }>());

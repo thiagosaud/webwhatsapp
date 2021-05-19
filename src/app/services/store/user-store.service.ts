@@ -15,6 +15,10 @@ import * as selector from '@store/user/user.selectors';
 export class UserStoreService {
 	constructor(protected readonly store: Store<IStoreState>) {}
 
+	restoreAll(): void {
+		this.store.dispatch(action.RESTORE_ALL());
+	}
+
 	setAll(): void {
 		this.store.dispatch(action.GET_ALL());
 	}

@@ -16,6 +16,10 @@ import * as selector from '@store/chat/chat.selectors';
 export class ChatStoreService {
 	constructor(protected readonly store: Store<IStoreState>) {}
 
+	restoreAll(): void {
+		this.store.dispatch(action.RESTORE_ALL());
+	}
+
 	setAll(): void {
 		this.store.dispatch(action.GET());
 	}

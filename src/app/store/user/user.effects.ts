@@ -17,6 +17,18 @@ import * as action from './user.actions';
 export class Effects {
 	constructor(protected readonly action$: Actions, protected readonly backendService: UserBackendService) {}
 
+	restoreAll$ = createEffect(() => {
+		return this.action$.pipe(
+			ofType(action.RESTORE_ALL),
+			switchMap(() =>
+				forkJoin([this.backendService.restoreAll()]).pipe(
+					map(updates => action.RESTORE_ALL_SUCCESS({ updates })),
+					catchError(error => of(action.RESTORE_ALL_FAIL({ error })))
+				)
+			)
+		);
+	});
+
 	getAll$ = createEffect(() =>
 		this.action$.pipe(
 			ofType(action.GET_ALL),

@@ -5,7 +5,6 @@
 	"private": true,
 	"scripts": {
 		"format_code": "pretty-quick --write \"{,!(node_modules)/**/}*.{ts, html, json, scss}\"",
-		"start_backend": "json-server --watch --port 4300 db.json",
 		"ng": "ng",
 		"start": "ng serve",
 		"build": "ng build",
@@ -32,10 +31,10 @@
 		"@ngrx/entity": "^9.1.2",
 		"@ngrx/store": "^9.1.2",
 		"@ngrx/store-devtools": "^9.1.2",
-		"json-server": "^0.16.3",
 		"rxjs": "~6.5.4",
 		"tslib": "^1.10.0",
 		"uuid": "^8.1.0",
+		"vercel": "^22.0.1",
 		"zone.js": "~0.10.2"
 	},
 	"devDependencies": {
