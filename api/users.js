@@ -1,9 +1,37 @@
 const database = [
 	{
-		id: '0f1f30df-aa71-4c49-bb5f-aa71c689a432',
+		id: '0f1f30df-aa71-4c49-bb5f-aa71c689a412',
 		full_name: 'THIAGO DE BONIS',
 		avatar: 'assets/images/users/thiago.jpg',
 		isMain: true,
+		isClicked: false,
+	},
+	{
+		id: '0f1f30df-aa71-4c49-bb5f-aa71c689a432',
+		full_name: 'THIAGO SAUD',
+		avatar: 'assets/images/users/thiago.jpg',
+		isMain: false,
+		isClicked: true,
+	},
+	{
+		id: '8r1f30df-aa71-4c49-bb5f-aa71c689g783',
+		full_name: 'ET',
+		avatar: 'assets/images/users/et.jpg',
+		isMain: false,
+		isClicked: false,
+	},
+	{
+		id: '6df1f30df-aa75-4c49-bb5f-aa71c689d319',
+		full_name: 'BABY YODA',
+		avatar: 'assets/images/users/yoda.jpg',
+		isMain: false,
+		isClicked: false,
+	},
+	{
+		id: '0df1f30df-aa75-4c49-bb5f-aa71c689a135',
+		full_name: 'ELON MUSK',
+		avatar: 'assets/images/users/elon.jpg',
+		isMain: false,
 		isClicked: false,
 	},
 	{
@@ -32,7 +60,7 @@ const database = [
 		full_name: 'NIKOLA TESLA',
 		avatar: 'assets/images/users/tesla.jpg',
 		isMain: false,
-		isClicked: true,
+		isClicked: false,
 	},
 	{
 		id: 'd564173f-bd44-41c5-95a9-4c0f3088271b',

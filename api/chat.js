@@ -1,5 +1,53 @@
 const database = [
 	{
+		id: '0f1f30df-aa71-4c49-bb5f-aa71c689a432',
+		messages: [
+			{
+				id: '5f5da569-c5a4-4be2-8ad3-8f29058efcda',
+				text: '😎 If you are seeing this message of mine, I thank you very much for your interest in seeing this prototype of my webwhatsap! If you wish, you can follow me too, on my linkedin and also on my github. 💖',
+				time: '2020-06-16T18:06:00.000Z',
+				isMain: false,
+				isRead: false,
+			},
+		],
+	},
+	{
+		id: '8r1f30df-aa71-4c49-bb5f-aa71c689g783',
+		messages: [
+			{
+				id: '6c5da569-c5a4-4be2-8ad3-8f29058efe3k',
+				text: 'If it is me, that being that lives alienly on a planet of the alienated, I can declare nothing more in my favor. 👽',
+				time: '2020-06-16T18:06:00.000Z',
+				isMain: false,
+				isRead: false,
+			},
+		],
+	},
+	{
+		id: '6df1f30df-aa75-4c49-bb5f-aa71c689d319',
+		messages: [
+			{
+				id: '8d5da569-c5a4-4be2-8ad3-8f29058ef8d9',
+				text: "When 900 years old you look so beautiful you won't",
+				time: '2020-06-16T18:06:00.000Z',
+				isMain: false,
+				isRead: false,
+			},
+		],
+	},
+	{
+		id: '0df1f30df-aa75-4c49-bb5f-aa71c689a135',
+		messages: [
+			{
+				id: '3f5da569-c6a4-4be2-8ad3-8f29058efbea',
+				text: 'You need reasons to get up in the morning and face life. Why do you want to live? What is the objective? What inspires you? What fascinates you most about tomorrow? If the future does not include being out there among the stars as a multi-planet species, it seems to me extremely depressing.',
+				time: '2020-06-16T18:06:00.000Z',
+				isMain: false,
+				isRead: false,
+			},
+		],
+	},
+	{
 		id: 'cd7a7081-8d00-4156-98fb-ae0410532b37',
 		messages: [
 			{
