@@ -9,8 +9,8 @@ $DIRECTION_LIST: 'top', 'right', 'bottom', 'left';
 		.h-auto { height: auto; }
 		.w-auto { width:  auto; }
 
-		.h-fill { height: -webkit-fill-available; }
-		.w-fill { width:  -webkit-fill-available; }
+		.h-fill { height: 100%; }
+		.w-fill { width:  100%; }
 
 		// margin and padding
 		.margin-none  { margin:  0; }

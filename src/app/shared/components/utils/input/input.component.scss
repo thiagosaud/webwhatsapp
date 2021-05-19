@@ -8,7 +8,6 @@ input {
 	font-size: 0.9rem;
 
 	&[theme='ROUNDED_DEFAULT'] {
-		@extend .margin-rl-1;
 		@extend .border-radius-stack;
 		@extend .bg-white;
 		@extend .color-black;
