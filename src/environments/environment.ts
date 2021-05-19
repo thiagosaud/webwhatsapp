@@ -6,7 +6,7 @@ import IEnvironment from './environment.interface';
 
 export const environment: IEnvironment = {
 	production: false,
-	backendUrl: `${window.location.href}/api`,
+	backendUrl: `${window.location.href}api`,
 };
 
 /*
