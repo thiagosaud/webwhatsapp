@@ -1,8 +1,8 @@
 const database = [
 	{
 		id: '0f1f30df-aa71-4c49-bb5f-aa71c689a412',
-		full_name: 'THIAGO DE BONIS',
-		avatar: 'assets/images/users/thiago.jpg',
+		full_name: 'USER',
+		avatar: 'assets/images/users/user.jpg',
 		isMain: true,
 		isClicked: false,
 	},
