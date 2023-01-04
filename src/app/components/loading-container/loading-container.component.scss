@@ -2,9 +2,20 @@
 @import 'themes/sizes';
 @import 'themes/colors';
 
-div {
+div.loading-container {
 	@extend .wvw-100;
 	@extend .hv-100;
 	@extend .d-flex-column-justify-align-center;
 	@extend .bg-brown-light-1;
+
+	div.hyperlink-container {
+		margin-top: 2rem;
+
+		a {
+			@extend .color-green-dark-1;
+
+			padding-left: 0.3rem;
+			text-decoration: underline;
+		}
+	}
 }
