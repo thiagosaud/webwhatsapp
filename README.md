@@ -98,6 +98,48 @@ yarn start
 
 **Note:** The control of the requests are made by the `switchMap` of the `RXJS library` and which is inside the `SideEffects` of the determined item in the `Store`, however as the backend was "moved" with the `Vercel Dev`.
 
+## :infinity: CI/CD
+
+This project has the following controls:
+
+**TEST WORKFLOW**
+
+| JOB NAME     | DESCRIPTION                       |
+| ------------ | --------------------------------- |
+| RUN PRETTIER | Test the Style-Guide.             |
+| RUN LINT     | Test Syntax Analisys of the code. |
+
+## :crown: Frontend Technologies
+
+| NAME            | URL                                                          |
+| --------------- | ------------------------------------------------------------ |
+| VERCEL          | [LINK](https://vercel.com/)                                  |
+| NGRX            | [LINK](https://ngrx.io/)                                     |
+| RXJS            | [LINK](https://rxjs.dev/)                                    |
+| VERCEL          | [LINK](https://vercel.com/)                                  |
+| SASS/LESS       | [LINK](https://sass-lang.com/)                               |
+| TSLINT          | [LINK](https://palantir.github.io/tslint/)                   |
+| BRANCHNAME LINT | [LINK](https://github.com/barzik/branch-name-lint)           |
+| COMMIT LINT     | [LINK](https://github.com/conventional-changelog/commitlint) |
+| EDITORCONFIG    | [LINK](hhttps://editorconfig.org/)                           |
+| PRETTIER        | [LINK](https://prettier.io/)                                 |
+| HUSKY           | [LINK](https://typicode.github.io/husky/#/)                  |
+| BROWSERLIST     | [LINK](https://browsersl.ist/)                               |
+
+## :wrench: Frontend Techniques
+
+| NAME                                                        | TECHNOLOGIES                   |
+| ----------------------------------------------------------- | ------------------------------ |
+| STATE MANAGEMENT                                            | NGRX                           |
+| ASYNC AND EVENT-BASED PROGRAMS BY USING OBSERVABLE SEQUENCE | RXJS                           |
+| CODE SYNTAX ANALISYS                                        | TSLINT, STYLELINT              |
+| CODE STYLE-GUIDE                                            | AIRBNB, PRETTIER, EDITORCONFIG |
+| BRANCH CONTROL AND STANDARDIZATION                          | BRANCHNAMELINT                 |
+| COMMIT CONTROL AND STANDARDIZATION                          | COMMITLINT                     |
+| GIT HOOKS CONTROL AND STANDARDIZATION                       | HUSKY                          |
+| RESPONSIVE DESIGN                                           | MOBILE FIRST, FLEXBOX AND GRID |
+| SERVELESS                                                   | WITH VERCEL                    |
+
 ## :memo: License
 
 See the [LICENSE](LICENSE) for more details.
