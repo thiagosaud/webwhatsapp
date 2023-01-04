@@ -9,7 +9,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 				(onclick)="closeChat.emit()"
 				[name]="'ARROW_BACK'"
 				[containerClass]="'d-none-only-desktop'"
-				[containerPadding]="'0 1.5rem 0 0'"
+				[containerPadding]="'0 1rem 0 0'"
 			></app-icon>
 
 			<app-avatar [src]="userAvatar" [alt]="userAvatarAlt"></app-avatar>

@@ -10,7 +10,7 @@ module.exports = (req, res) => {
 				messages: [
 					{
 						id: '5f5da569-c5a4-4be2-8ad3-8f29058efcda',
-						text: '😎 If you are seeing this message of mine, I thank you very much for your interest in seeing this prototype of my webwhatsap! If you wish, you can follow me too, on my linkedin and also on my github. 💖',
+						text: '😎 If you are seeing this message of mine, I thank you very much for your interest in seeing this prototype of my Whatsapp Web! If you wish, you can follow me too, on my linkedin, github: @thiagosaud and instagram: @thiagosaud.dev! 💖',
 						time: '2020-06-16T18:06:00.000Z',
 						isMain: false,
 						isRead: false,
@@ -177,7 +177,7 @@ module.exports = (req, res) => {
 				messages: [
 					{
 						id: '5f5da569-c5a4-4be2-8ad3-8f29058efcda',
-						text: '😎 If you are seeing this message of mine, I thank you very much for your interest in seeing this prototype of my webwhatsap! If you wish, you can follow me too, on my linkedin and also on my github. 💖',
+						text: '😎 If you are seeing this message of mine, I thank you very much for your interest in seeing this prototype of my Whatsapp Web! If you wish, you can follow me too, on my linkedin, github: @thiagosaud and instagram: @thiagosaud.dev! 💖',
 						time: '2020-06-16T18:06:00.000Z',
 						isMain: false,
 						isRead: false,
