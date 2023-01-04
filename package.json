@@ -19,7 +19,7 @@
 	},
 	"scripts": {
 		"ng": "ng",
-		"start": "export NODE_OPTIONS=--openssl-legacy-provider; ng serve",
+		"start": "export NODE_OPTIONS=--openssl-legacy-provider; vercel dev",
 		"build": "export NODE_OPTIONS=--openssl-legacy-provider; ng build --aot true",
 		"test": "export NODE_OPTIONS=--openssl-legacy-provider; ng test",
 		"e2e": "export NODE_OPTIONS=--openssl-legacy-provider; ng e2e",
