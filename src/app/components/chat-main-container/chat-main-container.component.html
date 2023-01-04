@@ -1,10 +1,12 @@
-<app-core-container [sizeTheme]="'LARGE'" [class]="'shadow-right-small'">
+<app-core-container [sizeTheme]="'LARGE'" [class]="isOpened ? 'shadow-right-small' : 'd-none'">
 	<app-user-panel-container
+		(closeChat)="handleOnCloseUserFriendChat()"
 		[isUserMainPanel]="false"
 		[username]="userFriendSelected?.full_name"
 		[userAvatar]="userFriendSelected?.avatar"
 		[userAvatarAlt]="userFriendSelected?.full_name"
-	></app-user-panel-container>
+	>
+	</app-user-panel-container>
 
 	<app-chat-message-list [list]="chatMessagesList"></app-chat-message-list>
 

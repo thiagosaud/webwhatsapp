@@ -8,18 +8,22 @@ div {
 	@extend .bg-white;
 
 	@include breakpoint-smartphone {
+		position: absolute;
 		height: 100vh;
+		width: 100%;
 	}
 
 	@include breakpoint-desktop {
+		position: relative;
+		display: flex !important;
 		height: 96vh;
-	}
 
-	&[sizeTheme='DEFAULT'] {
-		@extend .w-27;
-	}
+		&[sizeTheme='DEFAULT'] {
+			width: 27rem;
+		}
 
-	&[sizeTheme='LARGE'] {
-		@extend .w-60;
+		&[sizeTheme='LARGE'] {
+			width: 60rem;
+		}
 	}
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
 
@@ -12,12 +12,19 @@ import { ChatStoreService } from '@services/store/chat-store.service';
 	templateUrl: './chat-main-container.component.html',
 })
 export class ChatMainContainerComponent implements OnInit {
+	@Output() closeUserFriendChat = new EventEmitter();
+	@Input() isOpened = true;
 	@Input() userFriendSelected: IUser;
 	@Input() chatMessagesList: IChatMessage[];
 
 	constructor(protected readonly chatStore: ChatStoreService) {}
 
 	ngOnInit(): void {}
+
+	handleOnCloseUserFriendChat(): void {
+		this.isOpened = false;
+		this.closeUserFriendChat.emit();
+	}
 
 	sendMessage(formGroup: FormGroup): void {
 		if (formGroup.valid) {

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Update } from '@ngrx/entity';
 import { BehaviorSubject, combineLatest } from 'rxjs';
 
@@ -15,6 +15,7 @@ import { ChatStoreService } from '@services/store/chat-store.service';
 	templateUrl: './chat-aside-container.component.html',
 })
 export class ChatAsideContainerComponent implements OnInit {
+	@Output() openUserFriendChat = new EventEmitter();
 	@Input() userMain: IUser;
 	@Input() userFriendSelected: IUser;
 	@Input() lastMessagesList: IChatFriendLastMessagesList[];
@@ -23,11 +24,16 @@ export class ChatAsideContainerComponent implements OnInit {
 
 	ngOnInit(): void {}
 
-	updateStore({ userFriend }: { userFriend: IUser }): void {
+	updateStore(userFriend: IUser): void {
 		if (!userFriend.isClicked) {
 			this.updateChatUserFriend(userFriend, this.userFriendSelected);
 			this.updateUserFriend(userFriend, this.userFriendSelected);
 		}
+	}
+
+	handleOnOpenUserFriendChat({ userFriend }: { userFriend: IUser }): void {
+		this.updateStore(userFriend);
+		this.openUserFriendChat.emit();
 	}
 
 	protected updateUserFriend(userClicked: IUser, oldUserClicked: IUser): void {
