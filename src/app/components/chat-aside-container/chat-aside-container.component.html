@@ -1,5 +1,11 @@
 <app-core-container [class]="'shadow-left-small'">
-	<app-user-panel-container [isUserMainPanel]="true" [userAvatar]="userMain?.avatar" [userAvatarAlt]="userMain?.full_name"></app-user-panel-container>
+	<app-user-panel-container
+		[isUserMainPanel]="true"
+		[userAvatar]="userMain?.avatar"
+		[userAvatarAlt]="userMain?.full_name"
+	></app-user-panel-container>
+
 	<app-search-message-panel-container></app-search-message-panel-container>
-	<app-chat-last-message-list (onclick)="updateStore($event)" [list]="lastMessagesList"></app-chat-last-message-list>
+
+	<app-chat-last-message-list (onclick)="handleOnOpenUserFriendChat($event)" [list]="lastMessagesList"></app-chat-last-message-list>
 </app-core-container>
