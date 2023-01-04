@@ -1,3 +1,5 @@
+@import 'mixins/breakpoints';
+
 .user-select {
 	user-select: none;
 	-webkit-user-select: none !important;
@@ -22,4 +24,10 @@
 
 .d-none {
 	display: none !important;
+}
+
+.d-none-only-desktop {
+	@include breakpoint-desktop {
+		display: none !important;
+	}
 }

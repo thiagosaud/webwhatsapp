@@ -1,6 +1,6 @@
 {
 	"name": "webwhatsapp",
-	"version": "1.0.0-rc",
+	"version": "1.0.1-rc",
 	"license": "MIT",
 	"description": "This is a Whatsapp clone to demonstrate my Angular frontend skills.",
 	"keywords": [
@@ -29,7 +29,7 @@
 		"branchnamelint:check": "branch-name-lint .branchnamelint.json",
 		"prettier:check": "pretty-quick --staged",
 		"prettier:format": "pretty-quick --write \"{,!(node_modules)/**/}*.{ts, html, json, scss}\"",
-		"prepare": "husky install"
+		"prepare": "npx husky install"
 	},
 	"config": {
 		"commitizen": {

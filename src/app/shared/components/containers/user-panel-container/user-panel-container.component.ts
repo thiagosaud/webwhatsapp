@@ -4,7 +4,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 	selector: 'app-user-panel-container',
 	template: `
 		<app-panel-container [class]="'border-solid-left-light'">
-			<app-icon *ngIf="!isUserMainPanel" (onclick)="closeChat.emit()" [name]="'ARROW_BACK'" [containerPadding]="'0 1.5rem 0 0'"></app-icon>
+			<app-icon
+				*ngIf="!isUserMainPanel"
+				(onclick)="closeChat.emit()"
+				[name]="'ARROW_BACK'"
+				[containerClass]="'d-none-only-desktop'"
+				[containerPadding]="'0 1.5rem 0 0'"
+			></app-icon>
 
 			<app-avatar [src]="userAvatar" [alt]="userAvatarAlt"></app-avatar>
 

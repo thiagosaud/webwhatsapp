@@ -21,6 +21,8 @@ This project was created to _demonstrate all my knowledge with the Angular platf
 
 The **_VERCEL SERVELESS_** was also used to create a _"mock"_, where I _simulate the backend_, [Prettier](https://prettier.io/) and [Husky](https://github.com/typicode/husky) to _control style-guide_, _code standardization and versioning_.
 
+:link: [To interact with the project you can access this link [CLICK HERE]](https://webwhatsapp-thiagosaud.vercel.app/)
+
 ### Notes
 
 This project is still in _development mode_, _but functional for purposes of studies and knowledge_. What I will _implement in the future_ will be the _control of routes_ using the [NGRX-Router](https://ngrx.io/guide/router-store), the _control of data management of the entity_ with [NGRX-Data](https://ngrx.io/guide/data) and _possibly the insertion of user session simulation_.
@@ -95,6 +97,48 @@ yarn start
 ```
 
 **Note:** The control of the requests are made by the `switchMap` of the `RXJS library` and which is inside the `SideEffects` of the determined item in the `Store`, however as the backend was "moved" with the `Vercel Dev`.
+
+## :infinity: CI/CD
+
+This project has the following controls:
+
+**TEST WORKFLOW**
+
+| JOB NAME     | DESCRIPTION                       |
+| ------------ | --------------------------------- |
+| RUN PRETTIER | Test the Style-Guide.             |
+| RUN LINT     | Test Syntax Analisys of the code. |
+
+## :crown: Frontend Technologies
+
+| NAME            | URL                                                          |
+| --------------- | ------------------------------------------------------------ |
+| VERCEL          | [LINK](https://vercel.com/)                                  |
+| NGRX            | [LINK](https://ngrx.io/)                                     |
+| RXJS            | [LINK](https://rxjs.dev/)                                    |
+| VERCEL          | [LINK](https://vercel.com/)                                  |
+| SASS/LESS       | [LINK](https://sass-lang.com/)                               |
+| TSLINT          | [LINK](https://palantir.github.io/tslint/)                   |
+| BRANCHNAME LINT | [LINK](https://github.com/barzik/branch-name-lint)           |
+| COMMIT LINT     | [LINK](https://github.com/conventional-changelog/commitlint) |
+| EDITORCONFIG    | [LINK](hhttps://editorconfig.org/)                           |
+| PRETTIER        | [LINK](https://prettier.io/)                                 |
+| HUSKY           | [LINK](https://typicode.github.io/husky/#/)                  |
+| BROWSERLIST     | [LINK](https://browsersl.ist/)                               |
+
+## :wrench: Frontend Techniques
+
+| NAME                                                        | TECHNOLOGIES                   |
+| ----------------------------------------------------------- | ------------------------------ |
+| STATE MANAGEMENT                                            | NGRX                           |
+| ASYNC AND EVENT-BASED PROGRAMS BY USING OBSERVABLE SEQUENCE | RXJS                           |
+| CODE SYNTAX ANALISYS                                        | TSLINT, STYLELINT              |
+| CODE STYLE-GUIDE                                            | AIRBNB, PRETTIER, EDITORCONFIG |
+| BRANCH CONTROL AND STANDARDIZATION                          | BRANCHNAMELINT                 |
+| COMMIT CONTROL AND STANDARDIZATION                          | COMMITLINT                     |
+| GIT HOOKS CONTROL AND STANDARDIZATION                       | HUSKY                          |
+| RESPONSIVE DESIGN                                           | MOBILE FIRST, FLEXBOX AND GRID |
+| SERVELESS                                                   | WITH VERCEL                    |
 
 ## :memo: License
 
