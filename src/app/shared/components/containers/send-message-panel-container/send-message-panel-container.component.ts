@@ -4,7 +4,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
 	selector: 'app-send-message-panel-container',
 	template: `
-		<app-panel-container [sizeTheme]="'LARGE'" [class]="'padding-1 border-solid-left-light bg-brown-light-2'">
+		<app-panel-container
+			[sizeTheme]="'LARGE'"
+			[class]="'position-fixed-only-table-extra-large bottom-0 w-fill padding-1 border-solid-left-light'"
+		>
 			<app-icon [name]="'SMILEY'" [sizeTheme]="'LARGE'"></app-icon>
 
 			<app-send-message-form [fmGroup]="form"></app-send-message-form>
