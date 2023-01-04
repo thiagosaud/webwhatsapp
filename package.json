@@ -29,7 +29,7 @@
 		"branchnamelint:check": "branch-name-lint .branchnamelint.json",
 		"prettier:check": "pretty-quick --staged",
 		"prettier:format": "pretty-quick --write \"{,!(node_modules)/**/}*.{ts, html, json, scss}\"",
-		"prepare": "husky install"
+		"prepare": "npx husky install"
 	},
 	"config": {
 		"commitizen": {
