@@ -1,4 +1,4 @@
-![SOCIAL PREVIEW](https://raw.githubusercontent.com/thiagosaud/webwhatsapp/main/temp/imgs/social-preview.png 'WHATSAPP WEB BY THIAGO SAUD')
+![SOCIAL PREVIEW](https://raw.githubusercontent.com/thiagosaud/webwhatsapp/master/temp/imgs/social-preview.png 'WHATSAPP WEB BY THIAGO SAUD')
 
 #
 
