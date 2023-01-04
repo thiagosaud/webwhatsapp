@@ -1,6 +1,6 @@
 {
 	"name": "webwhatsapp",
-	"version": "1.0.0-rc",
+	"version": "1.0.1-rc",
 	"license": "MIT",
 	"description": "This is a Whatsapp clone to demonstrate my Angular frontend skills.",
 	"keywords": [
