@@ -21,6 +21,8 @@ This project was created to _demonstrate all my knowledge with the Angular platf
 
 The **_VERCEL SERVELESS_** was also used to create a _"mock"_, where I _simulate the backend_, [Prettier](https://prettier.io/) and [Husky](https://github.com/typicode/husky) to _control style-guide_, _code standardization and versioning_.
 
+:link: [To interact with the project you can access this link [CLICK HERE]](https://webwhatsapp-thiagosaud.vercel.app/)
+
 ### Notes
 
 This project is still in _development mode_, _but functional for purposes of studies and knowledge_. What I will _implement in the future_ will be the _control of routes_ using the [NGRX-Router](https://ngrx.io/guide/router-store), the _control of data management of the entity_ with [NGRX-Data](https://ngrx.io/guide/data) and _possibly the insertion of user session simulation_.
