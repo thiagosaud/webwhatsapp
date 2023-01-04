@@ -12,8 +12,9 @@ div.loading-container {
 		margin-top: 2rem;
 
 		a {
+			@extend .color-green-dark-1;
+
 			padding-left: 0.3rem;
-			color: black;
 			text-decoration: underline;
 		}
 	}

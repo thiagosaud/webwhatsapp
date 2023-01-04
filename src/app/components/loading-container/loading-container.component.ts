@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 
 			<div class="hyperlink-container">
 				<span>© All rights reserved by</span>
-				<a role="button" tabindex="0" href="https://github.com/thiagosaud/webwhatsapp"> Thiago Saud </a>
+				<a role="button" tabindex="0" href="https://github.com/thiagosaud/webwhatsapp">Thiago Saud</a>
 			</div>
 		</div>
 	`,
