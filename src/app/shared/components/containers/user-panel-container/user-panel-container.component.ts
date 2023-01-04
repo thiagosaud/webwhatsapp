@@ -3,7 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
 	selector: 'app-user-panel-container',
 	template: `
-		<app-panel-container [class]="'border-solid-left-light'">
+		<app-panel-container [class]="'position-fixed-only-table-extra-large top-0 z-index-1 w-fill border-solid-left-light'">
 			<app-icon
 				*ngIf="!isUserMainPanel"
 				(onclick)="closeChat.emit()"

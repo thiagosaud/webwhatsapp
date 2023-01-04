@@ -9,7 +9,11 @@
 	@extend .position-relative;
 	@extend .d-flex-grow;
 	@extend .bg-image-blend;
-	padding: 0 8%;
+	padding: 0 2rem;
+
+	@include breakpoint-max-tablet-extra-large {
+		padding: 4rem 2rem;
+	}
 
 	ul {
 		@extend .d-flex-column-align-center;
