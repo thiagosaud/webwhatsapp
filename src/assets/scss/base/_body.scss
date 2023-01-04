@@ -7,6 +7,7 @@ body {
 		@extend .hv-100;
 		@extend .d-flex;
 		@extend .bg-linear-gradient;
+		overflow: hidden !important;
 
 		@include breakpoint-desktop {
 			display: flex;
