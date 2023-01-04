@@ -5,7 +5,7 @@
 div {
 	@extend .d-flex-justify-align-between-center;
 	@extend .bg-brown-light-4;
-	@extend .padding-rl-1;
+	padding-left: 0.7rem;
 
 	&[sizeTheme='DEFAULT'] {
 		height: 3.6875rem;

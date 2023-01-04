@@ -1,3 +1,4 @@
+@import 'mixins/breakpoints';
 @import 'themes/flexbox';
 @import 'themes/positions';
 @import 'themes/colors';
@@ -18,7 +19,7 @@
 			@extend .shadow-bottom-light;
 			padding: 0.375rem 0.438rem 0 0.563rem;
 			margin-bottom: 0.4rem;
-			min-width: 15%;
+			min-width: 100%;
 			max-width: 66%;
 			word-break: break-all;
 
@@ -51,6 +52,10 @@
 					border-top: 0.9375rem solid white;
 					border-left: 0.9375rem solid transparent;
 				}
+			}
+
+			@include breakpoint-tablet-large {
+				min-width: 15%;
 			}
 		}
 	}
