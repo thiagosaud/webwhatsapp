@@ -1,21 +1,39 @@
 {
 	"name": "webwhatsapp",
-	"author": "THIAGO DE BONIS CARVALHO SAAD SAUD",
-	"version": "0.0.0",
-	"private": true,
-	"scripts": {
-		"format_code": "pretty-quick --write \"{,!(node_modules)/**/}*.{ts, html, json, scss}\"",
-		"ng": "ng",
-		"start": "ng serve",
-		"build": "ng build",
-		"test": "ng test",
-		"lint": "ng lint",
-		"e2e": "ng e2e"
+	"version": "1.0.0-rc",
+	"license": "MIT",
+	"description": "This is a Whatsapp clone to demonstrate my Angular frontend skills.",
+	"keywords": [
+		"thiagosaud",
+		"thiago saud",
+		"whatsapp",
+		"whatsapp web"
+	],
+	"author": {
+		"name": "THIAGO DE BONIS CARVALHO SAAD SAUD",
+		"url": "https://www.linkedin.com/in/thiagosaud/"
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "pretty-quick --staged && ng lint",
-			"pre-push": "ng build --aot true"
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/thiagosaud/webwhatsapp.git"
+	},
+	"scripts": {
+		"ng": "ng",
+		"start": "export NODE_OPTIONS=--openssl-legacy-provider; ng serve",
+		"build": "export NODE_OPTIONS=--openssl-legacy-provider; ng build --aot true",
+		"test": "export NODE_OPTIONS=--openssl-legacy-provider; ng test",
+		"e2e": "export NODE_OPTIONS=--openssl-legacy-provider; ng e2e",
+		"lint": "ng lint",
+		"commit": "git-cz",
+		"commitlint:check": "commitlint --edit",
+		"branchnamelint:check": "branch-name-lint .branchnamelint.json",
+		"prettier:check": "pretty-quick --staged",
+		"prettier:format": "pretty-quick --write \"{,!(node_modules)/**/}*.{ts, html, json, scss}\"",
+		"prepare": "husky install"
+	},
+	"config": {
+		"commitizen": {
+			"path": "git-cz"
 		}
 	},
 	"dependencies": {
@@ -42,12 +60,17 @@
 		"@angular/cli": "^9.1.8",
 		"@angular/compiler-cli": "~9.1.0",
 		"@angular/language-service": "~9.1.0",
+		"@commitlint/cli": "^17.4.0",
+		"@commitlint/config-conventional": "^17.4.0",
 		"@types/jasmine": "~3.5.0",
 		"@types/jasminewd2": "~2.0.3",
 		"@types/node": "^12.11.1",
 		"@types/uuid": "^8.0.0",
+		"branch-name-lint": "^2.1.1",
 		"codelyzer": "^5.1.2",
-		"husky": "^4.2.5",
+		"commitizen": "^4.2.6",
+		"git-cz": "^4.9.0",
+		"husky": "^8.0.0",
 		"jasmine-core": "~3.5.0",
 		"jasmine-spec-reporter": "~4.2.1",
 		"karma": "^5.1.0",
