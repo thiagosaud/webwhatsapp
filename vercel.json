@@ -1,15 +1,7 @@
 {
 	"version": 2,
-	"routes": [
-		{
-			"src": "/api/users",
-			"dest": "/api/users.js",
-			"methods": ["GET", "PATCH", "PUT"]
-		},
-		{
-			"src": "/api/chat",
-			"dest": "/api/chat.js",
-			"methods": ["GET", "PATCH", "PUT"]
-		}
+	"rewrites": [
+		{ "source": "/(.*)/api/users", "destination": "/api/users.js" },
+		{ "source": "/(.*)/api/chat", "destination": "/api/chat.js" }
 	]
 }
