@@ -1,3 +1,4 @@
+@import 'mixins/breakpoints';
 @import 'themes/cursors';
 @import 'themes/flexbox';
 @import 'themes/colors';
@@ -9,6 +10,11 @@
 	@extend .d-flex-grow;
 
 	ul {
+		@include breakpoint-max-tablet-extra-large {
+			margin-top: 0.6rem;
+			margin-bottom: 5.5rem;
+		}
+
 		li {
 			@extend .cursor-pointer;
 			@extend .d-flex-justify-align-between-center;
