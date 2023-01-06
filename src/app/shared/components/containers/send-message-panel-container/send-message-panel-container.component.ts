@@ -8,7 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 			[sizeTheme]="'LARGE'"
 			[class]="'position-fixed-only-table-extra-large bottom-0 w-fill padding-1 border-solid-left-light'"
 		>
-			<app-icon [name]="'SMILEY'" [sizeTheme]="'LARGE'"></app-icon>
+			<app-icon [name]="'SMILEY'" [sizeTheme]="'LARGE'" [containerPadding]="'0 1rem 0 0'"></app-icon>
 
 			<app-send-message-form [fmGroup]="form"></app-send-message-form>
 

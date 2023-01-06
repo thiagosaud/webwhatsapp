@@ -1,6 +1,8 @@
 @import 'mixins/breakpoints';
 
 body {
+	overflow: hidden;
+
 	app-root {
 		@extend .scrollbar-grey-large;
 		@extend .scrollbar-auto;
