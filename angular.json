@@ -64,7 +64,9 @@
 				"serve": {
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"options": {
-						"browserTarget": "webwhatsapp:build"
+						"browserTarget": "webwhatsapp:build",
+						"host": "localhost",
+						"liveReload": true
 					},
 					"configurations": {
 						"production": {
